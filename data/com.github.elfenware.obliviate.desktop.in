@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Obliviate
+GenericName=Password Manager
+Comment=Derive passwords using a cipher key
+Exec=com.github.elfenware.obliviate %U
+Icon=com.github.elfenware.obliviate
+Terminal=false
+Categories=Utility;GTK;
+Keywords=Password;Manager;Security;Generate;Derive;
