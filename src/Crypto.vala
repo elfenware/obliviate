@@ -18,9 +18,13 @@
  *
  */
 
+public errordomain Obliviate.CryptoError {
+    DERIVATION_FAILED
+}
+
 public class Obliviate.Crypto : GLib.Object {
 
-    public static string derive_password (string cipher_key, string salt) {
+    public static string derive_password (string cipher_key, string salt) throws CryptoError {
         var keybuffer = new uint8[16];
 
         const char[] ALLOWED_CHARS = {
@@ -33,7 +37,6 @@ public class Obliviate.Crypto : GLib.Object {
             '>', '?', '@', '^', '_', '`', '{', '|', '}', '~'
         };
 
-        // TODO: handle error
         var error = GCrypt.KeyDerivation.derive (
             cipher_key.data,
             GCrypt.KeyDerivation.Algorithm.PBKDF2,
@@ -42,6 +45,10 @@ public class Obliviate.Crypto : GLib.Object {
             10000,
             keybuffer
         );
+
+        if (error.code () != GCrypt.ErrorCode.NO_ERROR) {
+            throw new CryptoError.DERIVATION_FAILED (error.to_string ());
+        }
 
         // keybuffer will have values ranging from 0 to 255.
         // This is the mapping of those integers to ALLOWED_CHARS.

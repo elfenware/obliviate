@@ -135,18 +135,24 @@ public class Obliviate.MainView : Gtk.Overlay {
     }
 
     private void handle_generate_password () {
-        var derived_password = Crypto.derive_password (cipher_key.text, site.text.down ());
-        generated_pass.text = derived_password;
+        try {
+            var derived_password = Crypto.derive_password (cipher_key.text, site.text.down ());
+            generated_pass.text = derived_password;
 
-        generated_pass_label.sensitive = true;
-        show_generated_pass.sensitive = true;
-        copy_btn.sensitive = true;
+            generated_pass_label.sensitive = true;
+            show_generated_pass.sensitive = true;
+            copy_btn.sensitive = true;
 
-        copy_btn.is_focus = true;
+            copy_btn.is_focus = true;
+        } catch (CryptoError error) {
+            toast.title = _ ("Could not derive password");
+            toast.send_notification ();
+        }
     }
 
     private void handle_copy () {
         clipboard.set_text (generated_pass.text, generated_pass.text.length);
+        toast.title = _ ("Copied to clipboard");
         toast.send_notification ();
     }
 
