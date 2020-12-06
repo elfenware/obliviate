@@ -25,6 +25,7 @@ public class Obliviate.MainView : Gtk.Overlay {
 
     private Gtk.Entry site;
     private Gtk.Entry cipher_key;
+    private Gtk.Button generate_btn;
     private Gtk.Label generated_pass_label;
     private Gtk.Entry generated_pass;
     private Gtk.ToggleButton show_generated_pass;
@@ -51,6 +52,7 @@ public class Obliviate.MainView : Gtk.Overlay {
         };
 
         site = new Gtk.Entry ();
+        site.changed.connect (validate);
 
         var cipher_key_label = new Gtk.Label (_ ("Cipher key:")) {
             halign = Gtk.Align.END,
@@ -64,6 +66,8 @@ public class Obliviate.MainView : Gtk.Overlay {
             input_purpose = Gtk.InputPurpose.PASSWORD
         };
 
+        cipher_key.changed.connect (validate);
+
         var show_cipher_key = new Gtk.ToggleButton () {
             active = true,
             tooltip_text = _ ("Show or hide the cipher key")
@@ -72,7 +76,8 @@ public class Obliviate.MainView : Gtk.Overlay {
         show_cipher_key.add (new Gtk.Image.from_icon_name ("image-red-eye-symbolic", Gtk.IconSize.BUTTON));
         show_cipher_key.bind_property ("active", cipher_key, "visibility", BindingFlags.INVERT_BOOLEAN);
 
-        var generate_btn = new Gtk.Button.with_label (_ ("Derive Password")) {
+        generate_btn = new Gtk.Button.with_label (_ ("Derive Password")) {
+            sensitive = false,
             margin_bottom = 24
         };
 
@@ -125,7 +130,6 @@ public class Obliviate.MainView : Gtk.Overlay {
     }
 
     private void handle_generate_password () {
-        // TODO: validate fields
         // TODO: make site case insensitive
         var derived_password = Crypto.derive_password (cipher_key.text, site.text);
         generated_pass.text = derived_password;
@@ -140,5 +144,9 @@ public class Obliviate.MainView : Gtk.Overlay {
     private void handle_copy () {
         clipboard.set_text (generated_pass.text, generated_pass.text.length);
         toast.send_notification ();
+    }
+
+    private void validate () {
+        generate_btn.sensitive = site.text.length > 0 && cipher_key.text.length > 0;
     }
 }
