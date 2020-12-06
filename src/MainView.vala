@@ -84,11 +84,10 @@ public class Obliviate.MainView : Gtk.Overlay {
             sensitive = false
         };
 
-        // visibility tells whether the password is displayed in plain text
-        // visible tells whether the element itself is visible
         generated_pass = new Gtk.Entry () {
             visibility = false,
-            editable = false
+            editable = false,
+            sensitive = false
         };
 
         generated_pass.get_style_context ().add_class ("flat");
