@@ -18,7 +18,6 @@
  *
  */
 
-// TODO: Pick a good name
 public class Obliviate.MainView : Gtk.Overlay {
 
     private Gtk.Grid grid;
