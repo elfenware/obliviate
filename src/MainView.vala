@@ -66,7 +66,8 @@ public class Obliviate.MainView : Gtk.Overlay {
         };
 
         var show_cipher_key = new Gtk.ToggleButton () {
-            active = true
+            active = true,
+            tooltip_text = _ ("Show or hide the cipher key")
         };
 
         show_cipher_key.add (new Gtk.Image.from_icon_name ("image-red-eye-symbolic", Gtk.IconSize.BUTTON));
@@ -95,6 +96,7 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         show_generated_pass = new Gtk.ToggleButton () {
             active = true,
+            tooltip_text = _ ("Show or hide the password"),
             sensitive = false
         };
 
