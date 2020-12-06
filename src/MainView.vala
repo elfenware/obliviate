@@ -54,6 +54,10 @@ public class Obliviate.MainView : Gtk.Overlay {
         site = new Gtk.Entry ();
         site.changed.connect (validate);
 
+        var site_info = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.MENU) {
+            tooltip_text = _ ("Site is not case-sensitive. “GitHub” equals “github”.")
+        };
+
         var cipher_key_label = new Gtk.Label (_ ("Cipher key:")) {
             halign = Gtk.Align.END,
             margin_right = 4
@@ -113,6 +117,7 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         grid.attach (site_label, 0, 0, 1, 1);
         grid.attach_next_to (site, site_label, Gtk.PositionType.RIGHT);
+        grid.attach_next_to (site_info, site, Gtk.PositionType.RIGHT);
 
         grid.attach (cipher_key_label, 0, 1, 1, 1);
         grid.attach_next_to (cipher_key, cipher_key_label, Gtk.PositionType.RIGHT);
@@ -130,8 +135,7 @@ public class Obliviate.MainView : Gtk.Overlay {
     }
 
     private void handle_generate_password () {
-        // TODO: make site case insensitive
-        var derived_password = Crypto.derive_password (cipher_key.text, site.text);
+        var derived_password = Crypto.derive_password (cipher_key.text, site.text.down ());
         generated_pass.text = derived_password;
 
         generated_pass_label.sensitive = true;
