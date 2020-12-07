@@ -51,7 +51,10 @@ public class Obliviate.MainView : Gtk.Overlay {
             margin_right = 4
         };
 
-        site = new Gtk.Entry ();
+        site = new Gtk.Entry () {
+            placeholder_text = _ ("GitHub")
+        };
+
         site.changed.connect (validate);
 
         var site_info = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.MENU) {
@@ -67,7 +70,9 @@ public class Obliviate.MainView : Gtk.Overlay {
         cipher_key = new Gtk.Entry () {
             visibility = false,
             caps_lock_warning = true,
-            input_purpose = Gtk.InputPurpose.PASSWORD
+            input_purpose = Gtk.InputPurpose.PASSWORD,
+            placeholder_text = _ ("correct horse battery staple"),
+            width_chars = 24
         };
 
         cipher_key.changed.connect (validate);

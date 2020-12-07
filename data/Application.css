@@ -33,10 +33,6 @@
     box-shadow: none;
 }
 
-entry {
-    font-family: monospace;
-}
-
 entry.flat {
     background: transparent;
     border: none;
