@@ -17,7 +17,18 @@
 
 ## Description
 
-[WIP]
+Obliviate does not store your passwords, but gives them to you when you need them. How?
+
+It asks you for two things:
+
+- the site you want to log in to
+- a cipher key, which is any passphrase <a href="https://xkcd.com/936/" target="_blank">you can remember</a>
+
+Using these, it will derive a password, which you can set as your new password for that site.
+
+The next time you need it, enter the same site and same cipher key. Obliviate will derive the same password as before.
+
+It’s not magic, but it’s quite close.
 
 ## Built for elementary OS
 

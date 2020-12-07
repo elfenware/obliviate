@@ -5,9 +5,17 @@
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Obliviate</name>
-  <summary>Summary</summary>
+  <summary>A password manager that forgets your passwords</summary>
   <description>
-    <p>Description</p>
+    <p>Obliviate does not store your passwords, but gives them to you when you need them. How?</p>
+    <p>It asks you for two things:</p>
+    <ul>
+        <li>the site you want to log in to</li>
+        <li>a cipher key, which is any passphrase <a href="https://xkcd.com/936/" target="_blank">you can remember</a></li>
+    </ul>
+    <p>Using these, it will derive a password, which you can set as your new password for that site.</p>
+    <p>The next time you need it, enter the same site and same cipher key. Obliviate will derive the same password as before.</p>
+    <p>It’s not magic, but it’s quite close.</p>
   </description>
   <releases>
     <release version="1.0.0" date="2020-11-27">
