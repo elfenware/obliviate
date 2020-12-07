@@ -23,7 +23,6 @@ public errordomain Obliviate.CryptoError {
 }
 
 public class Obliviate.Crypto : GLib.Object {
-
     public static string derive_password (string cipher_key, string salt) throws CryptoError {
         var keybuffer = new uint8[16];
 

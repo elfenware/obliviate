@@ -19,7 +19,6 @@
  */
 
 public class Obliviate.Application : Granite.Application {
-
     private Obliviate.MainWindow window;
 
     public Application () {
@@ -46,7 +45,6 @@ public class Obliviate.Application : Granite.Application {
 
     public static int main (string[] args) {
         var app = new Obliviate.Application ();
-
         return app.run (args);
     }
 }

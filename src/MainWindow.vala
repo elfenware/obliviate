@@ -19,7 +19,6 @@
  */
 
 public class Obliviate.MainWindow : Gtk.ApplicationWindow {
-
     private GLib.Settings settings;
 
     public MainWindow (Gtk.Application app) {
@@ -51,6 +50,7 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
             has_subtitle = false,
             show_close_button = true
         };
+
         header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         header.get_style_context ().add_class ("headerbar");
 

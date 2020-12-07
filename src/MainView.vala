@@ -19,7 +19,6 @@
  */
 
 public class Obliviate.MainView : Gtk.Overlay {
-
     private Gtk.Grid grid;
     private Granite.Widgets.Toast toast;
 
@@ -118,6 +117,7 @@ public class Obliviate.MainView : Gtk.Overlay {
         copy_btn = new Gtk.Button.with_label (_ ("Copy")) {
             sensitive = false
         };
+
         copy_btn.clicked.connect (handle_copy);
 
         grid.attach (site_label, 0, 0, 1, 1);
