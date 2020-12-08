@@ -65,6 +65,9 @@
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/elfenware/obliviate/master/data/window-screenshot.png</image>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/elfenware/obliviate/master/data/window-screenshot-2.png</image>
+    </screenshot>
   </screenshots>
   <custom>
     <value key="x-appcenter-color-primary">#fff</value>
