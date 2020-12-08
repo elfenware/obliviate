@@ -47,7 +47,7 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         var site_label = new Gtk.Label (_ ("Site:")) {
             halign = Gtk.Align.END,
-            margin_right = 4
+            margin_end = 4
         };
 
         site = new Gtk.Entry () {
@@ -62,7 +62,7 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         var cipher_key_label = new Gtk.Label (_ ("Cipher key:")) {
             halign = Gtk.Align.END,
-            margin_right = 4
+            margin_end = 4
         };
 
         // TODO: replace with Gtk.PasswordEntry after updating to Gtk4
@@ -93,7 +93,7 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         generated_pass_label = new Gtk.Label (_ ("Password:")) {
             halign = Gtk.Align.END,
-            margin_right = 4,
+            margin_end = 4,
             sensitive = false
         };
 
