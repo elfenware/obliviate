@@ -1,8 +1,8 @@
 <!--[![Build Status](https://travis-ci.org/elfenware/obliviate.svg?branch=master)](https://travis-ci.org/elfenware/obliviate)-->
 
-<!--<p align="center">-->
-<!--    <img src="data/icons/128/com.github.elfenware.obliviate.svg" alt="Icon" />-->
-<!--</p>-->
+<p align="center">
+   <img src="data/icons/128/com.github.elfenware.obliviate.svg" alt="Icon" />
+</p>
 
 <h1 align="center">Obliviate</h1>
 <p align="center">A password manager that forgets your passwords</p>
