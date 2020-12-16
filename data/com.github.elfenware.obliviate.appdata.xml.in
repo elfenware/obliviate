@@ -11,7 +11,7 @@
     <p>It asks you for two things:</p>
     <ul>
         <li>the site you want to log in to</li>
-        <li>a cipher key, which is any passphrase <a href="https://xkcd.com/936/" target="_blank">you can remember</a></li>
+        <li>a cipher key, which is any passphrase you can remember</li>
     </ul>
     <p>Using these, it will derive a password, which you can set as your new password for that site.</p>
     <p>The next time you need it, enter the same site and same cipher key. Obliviate will derive the same password as before.</p>
