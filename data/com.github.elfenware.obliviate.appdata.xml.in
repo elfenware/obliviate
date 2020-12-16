@@ -16,6 +16,7 @@
     <p>Using these, it will derive a password, which you can set as your new password for that site.</p>
     <p>The next time you need it, enter the same site and same cipher key. Obliviate will derive the same password as before.</p>
     <p>It’s not magic, but it’s quite close.</p>
+    <p><em>Bonus:</em> If you need your passwords on another device, you can get them on the web from https://obliviate.app/.</p>
   </description>
   <releases>
     <release version="1.0.0" date="2020-11-27">

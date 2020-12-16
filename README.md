@@ -30,6 +30,10 @@ The next time you need it, enter the same site and same cipher key. Obliviate wi
 
 It’s not magic, but it’s quite close.
 
+### Bonus
+
+If you need your passwords on another device, you can get them on the web from [obliviate.app](https://obliviate.app/).
+
 ## Built for elementary OS
 
 While Obliviate will happily compile on any Linux distribution, it is primarily
