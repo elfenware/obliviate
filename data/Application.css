@@ -19,7 +19,7 @@
  */
 
 @define-color colorPrimary @BLACK_500;
-@define-color colorAccent @ORANGE_700;
+@define-color colorAccent @COCOA_500;
 @define-color textColorPrimary white;
 
 *:active,
