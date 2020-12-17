@@ -28,7 +28,9 @@ public class Obliviate.Application : Granite.Application {
     }
 
     protected override void activate () {
+        var main = new MainView ();
         window = new MainWindow (this);
+        window.add (main);
 
         var provider = new Gtk.CssProvider ();
         provider.load_from_resource ("/com/github/elfenware/obliviate/Application.css");
@@ -37,6 +39,8 @@ public class Obliviate.Application : Granite.Application {
             provider,
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
         );
+
+        window.show_all ();
     }
 
     public static int main (string[] args) {
