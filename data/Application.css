@@ -36,6 +36,7 @@
 entry.flat {
     background: transparent;
     border: none;
+    color: @colorPrimary;
     font-weight: bold;
     padding-bottom: 0;
 }
