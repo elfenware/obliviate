@@ -28,6 +28,14 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
     construct {
         set_titlebar (get_header ());
 
+        var main = new MainView ();
+        add (main);
+
+        set_geometry_hints (null, Gdk.Geometry () {
+            min_width = 510,
+            min_height = 420
+        }, Gdk.WindowHints.MIN_SIZE);
+
         settings = new GLib.Settings ("com.github.elfenware.obliviate.state");
 
         int default_x = settings.get_int ("window-x");
@@ -38,6 +46,8 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
         }
 
         resize (settings.get_int ("window-width"), settings.get_int ("window-height"));
+
+        show_all ();
 
         delete_event.connect (e => {
             return before_destroy ();

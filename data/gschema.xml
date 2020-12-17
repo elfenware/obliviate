@@ -5,12 +5,12 @@
     id="com.github.elfenware.obliviate.state"
     gettext-domain="com.github.elfenware.obliviate">
     <key name="window-width" type="i">
-      <default>360</default>
+      <default>510</default>
       <summary>The saved width of the window.</summary>
       <description>The saved width of the window.</description>
     </key>
     <key name="window-height" type="i">
-      <default>240</default>
+      <default>420</default>
       <summary>The saved height of the window.</summary>
       <description>The saved height of the window.</description>
     </key>
