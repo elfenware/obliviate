@@ -28,6 +28,9 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
     construct {
         set_titlebar (get_header ());
 
+        var main = new MainView ();
+        add (main);
+
         settings = new GLib.Settings ("com.github.elfenware.obliviate.state");
 
         int default_x = settings.get_int ("window-x");
@@ -37,7 +40,11 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
             move (default_x, default_y);
         }
 
-        resize (settings.get_int ("window-width"), settings.get_int ("window-height"));
+        show_all ();
+
+        Gtk.Requisition min, nat;
+        get_preferred_size (out min, out nat);
+        resize (nat.width, min.height + 36);
 
         delete_event.connect (e => {
             return before_destroy ();
@@ -65,8 +72,6 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
 
         settings.set_int ("window-x", x);
         settings.set_int ("window-y", y);
-        settings.set_int ("window-width", width);
-        settings.set_int ("window-height", height);
 
         hide ();
         return true;
