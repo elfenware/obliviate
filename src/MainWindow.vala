@@ -78,7 +78,6 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
         settings.set_int ("window-width", width);
         settings.set_int ("window-height", height);
 
-        hide ();
-        return true;
+        return false;
     }
 }
