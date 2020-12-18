@@ -7,7 +7,7 @@
   <name>Obliviate</name>
   <summary>A password manager that forgets your passwords</summary>
   <description>
-    <p>Obliviate does not store your passwords, but gives them to you when you need them. How?</p>
+    <p>Obliviate does not store your passwords but gives them to you when you need them. How?</p>
     <p>It asks you for two things:</p>
     <ul>
         <li>the site you want to log in to</li>
@@ -21,7 +21,7 @@
   <releases>
     <release version="1.0.0" date="2020-11-27">
       <description>
-        <p>Initial Release 🎉️</p>
+        <p>Initial release 🎉️</p>
       </description>
     </release>
   </releases>

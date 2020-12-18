@@ -17,7 +17,7 @@
 
 ## Description
 
-Obliviate does not store your passwords, but gives them to you when you need them. How?
+Obliviate does not store your passwords but gives them to you when you need them. How?
 
 It asks you for two things:
 
