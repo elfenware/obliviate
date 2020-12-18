@@ -16,9 +16,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - libstdc++-5-dev
-
-before_install:
-  - sudo apt-get -y install libgcrypt20-dev 
+      - libgcrypt20-dev
 
 install:
   - npm i -g @elementaryos/houston
