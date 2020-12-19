@@ -19,11 +19,11 @@ msgstr ""
 
 #: src/MainView.vala:43 src/MainView.vala:160
 msgid "Copied to clipboard"
-msgstr "Copiado al portapapeles"
+msgstr "Copiado en el portapapeles"
 
 #: src/MainView.vala:48
 msgid "Site:"
-msgstr "Sitio:"
+msgstr "Página web:"
 
 #: src/MainView.vala:54
 msgid "GitHub"
@@ -31,7 +31,7 @@ msgstr "GitHub"
 
 #: src/MainView.vala:60
 msgid "Site is not case-sensitive. “GitHub” equals “github”."
-msgstr "El sitio no distingue entre mayúsculas y minúsculas. «GitHub» es igual a «github»."
+msgstr "El nombre de la página web no distingue entre mayúsculas y minúsculas. «GitHub» es igual a «github»."
 
 #: src/MainView.vala:63
 msgid "Cipher key:"
@@ -63,7 +63,7 @@ msgstr "Copiar"
 
 #: src/MainView.vala:153
 msgid "Could not derive password"
-msgstr "No se puede derivar la contraseña"
+msgstr "No se pudo derivar la contraseña"
 
 #: data/com.github.elfenware.obliviate.desktop.in:4
 #: data/com.github.elfenware.obliviate.appdata.xml.in:7
@@ -99,7 +99,7 @@ msgstr "Le pide dos cosas:"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:13
 msgid "the site you want to log in to"
-msgstr "el sitio en el que desee iniciar sesión"
+msgstr "la página web en la que desea iniciar sesión"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:14
 msgid "a cipher key, which is any passphrase you can remember"
@@ -124,7 +124,7 @@ msgstr ""
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:18
 msgid "It’s not magic, but it’s quite close."
-msgstr "No es mágico, pero está bastante cerca."
+msgstr "No es mágico, pero casi."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:19
 msgid ""
@@ -132,7 +132,7 @@ msgid ""
 "them on the web from https://obliviate.app/."
 msgstr ""
 "<em>La bonificación:</em> Si necesita sus contraseñas en otro dispositivo, "
-"puede obtenerlas en la web desde https://obliviate.app/."
+"puede obtenerlas en la web https://obliviate.app/."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:24
 msgid "Initial release 🎉️"
@@ -141,4 +141,3 @@ msgstr "Publicación inicial 🎉️"
 #: data/com.github.elfenware.obliviate.appdata.xml.in:60
 msgid "Elfenware"
 msgstr "Elfenware"
-
