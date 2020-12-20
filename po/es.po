@@ -82,7 +82,7 @@ msgstr "Derive contraseñas usando una clave de cifrado"
 
 #: data/com.github.elfenware.obliviate.desktop.in:11
 msgid "Password;Manager;Security;Generate;Derive;"
-msgstr "Contraseña;Administrador;Seguridad;Generar;Derivar"
+msgstr "Contraseña;Administrador;Seguridad;Generar;Derivar;"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:8
 msgid "A password manager that forgets your passwords"
