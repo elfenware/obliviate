@@ -16,7 +16,6 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - libstdc++-5-dev
-      - libgcrypt11-dev
 
 install:
   - npm i -g @elementaryos/houston
