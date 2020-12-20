@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-20 12:05+0100\n"
+"POT-Creation-Date: 2020-12-20 17:56+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,10 +28,6 @@ msgstr ""
 
 #: data/com.github.elfenware.obliviate.desktop.in:6
 msgid "Derive passwords using a cipher key"
-msgstr ""
-
-#: data/com.github.elfenware.obliviate.desktop.in:8
-msgid "com.github.elfenware.obliviate"
 msgstr ""
 
 #: data/com.github.elfenware.obliviate.desktop.in:11
@@ -79,7 +75,7 @@ msgstr ""
 #: data/com.github.elfenware.obliviate.appdata.xml.in:19
 msgid ""
 "<em>Bonus:</em> If you need your passwords on another device, you can get "
-"them on the web from obliviate.app."
+"them on the web from <em>obliviate.app</em>."
 msgstr ""
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:24

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-20 12:05+0100\n"
+"POT-Creation-Date: 2020-12-20 17:56+0530\n"
 "PO-Revision-Date: 2020-12-20 12:03+0100\n"
 "Last-Translator: Darshak Parikh, José Expósito\n"
 "Language-Team: Español\n"
@@ -29,10 +29,6 @@ msgstr "Administrador de Contraseñas"
 #: data/com.github.elfenware.obliviate.desktop.in:6
 msgid "Derive passwords using a cipher key"
 msgstr "Derive contraseñas usando una clave de cifrado"
-
-#: data/com.github.elfenware.obliviate.desktop.in:8
-msgid "com.github.elfenware.obliviate"
-msgstr ""
 
 #: data/com.github.elfenware.obliviate.desktop.in:11
 msgid "Password;Manager;Security;Generate;Derive;"
@@ -86,7 +82,7 @@ msgstr "No es mágico, pero casi."
 #: data/com.github.elfenware.obliviate.appdata.xml.in:19
 msgid ""
 "<em>Bonus:</em> If you need your passwords on another device, you can get "
-"them on the web from obliviate.app."
+"them on the web from <em>obliviate.app</em>."
 msgstr ""
 "<em>La bonificación:</em> Si necesita sus contraseñas en otro dispositivo, "
 "puede obtenerlas en la web <em>obliviate.app</em>."
