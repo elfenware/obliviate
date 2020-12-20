@@ -2,5 +2,3 @@ src/Application.vala
 src/MainWindow.vala
 src/MainView.vala
 src/Crypto.vala
-data/com.github.elfenware.obliviate.desktop.in
-data/com.github.elfenware.obliviate.appdata.xml.in
