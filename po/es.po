@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 20:37+0530\n"
+"POT-Creation-Date: 2020-12-20 12:24+0530\n"
 "PO-Revision-Date: 2020-12-18 20:37+0530\n"
 "Last-Translator: Darshak Parikh\n"
 "Language-Team: Español\n"
@@ -31,7 +31,9 @@ msgstr "GitHub"
 
 #: src/MainView.vala:60
 msgid "Site is not case-sensitive. “GitHub” equals “github”."
-msgstr "El nombre de la página web no distingue entre mayúsculas y minúsculas. «GitHub» es igual a «github»."
+msgstr ""
+"El nombre de la página web no distingue entre mayúsculas y minúsculas. "
+"«GitHub» es igual a «github»."
 
 #: src/MainView.vala:63
 msgid "Cipher key:"
@@ -90,8 +92,9 @@ msgstr "Un administrador de contraseñas que olvida sus contraseñas"
 msgid ""
 "Obliviate does not store your passwords but gives them to you when you need "
 "them. How?"
-msgstr "Obliviate no almacena sus contraseñas, pero se las da cuando las "
-"necesita. ¿Cómo?"
+msgstr ""
+"Obliviate no almacena sus contraseñas, pero se las da cuando las necesita. "
+"¿Cómo?"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:11
 msgid "It asks you for two things:"
@@ -103,8 +106,8 @@ msgstr "la página web en la que desea iniciar sesión"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:14
 msgid "a cipher key, which is any passphrase you can remember"
-msgstr "una clave de cifrado, que es cualquier frase de contraseña que pueda "
-"recordar"
+msgstr ""
+"una clave de cifrado, que es cualquier frase de contraseña que pueda recordar"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:16
 msgid ""
@@ -127,12 +130,13 @@ msgid "It’s not magic, but it’s quite close."
 msgstr "No es mágico, pero casi."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:19
+#, fuzzy
 msgid ""
 "<em>Bonus:</em> If you need your passwords on another device, you can get "
-"them on the web from https://obliviate.app/."
+"them on the web from obliviate.app."
 msgstr ""
 "<em>La bonificación:</em> Si necesita sus contraseñas en otro dispositivo, "
-"puede obtenerlas en la web https://obliviate.app/."
+"puede obtenerlas en la web <em>obliviate.app</em>."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:24
 msgid "Initial release 🎉️"
