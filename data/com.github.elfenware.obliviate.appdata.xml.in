@@ -58,7 +58,7 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <developer_name>Elfenware</developer_name>
-  <url type="homepage">https://github.com/elfenware/obliviate</url>
+  <url type="homepage">https://obliviate.app</url>
   <url type="bugtracker">https://github.com/elfenware/obliviate/issues</url>
   <url type="help">https://github.com/elfenware/obliviate/issues</url>
   <update_contact>darshak_AT_protonmail.com</update_contact>
