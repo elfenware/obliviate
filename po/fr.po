@@ -1,0 +1,66 @@
+# French translations for com.github.elfenware.obliviate package.
+# Copyright (C) 2020 THE com.github.elfenware.obliviate'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.elfenware.obliviate package.
+# Nathan Bonnemains (@NathanBnm), 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.elfenware.obliviate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-20 15:41+0100\n"
+"PO-Revision-Date: 2020-12-20 13:26+0530\n"
+"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
+"Language-Team: Français\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/MainView.vala:43 src/MainView.vala:160
+msgid "Copied to clipboard"
+msgstr "Copié dans le presse-papiers"
+
+#: src/MainView.vala:48
+msgid "Site:"
+msgstr "Site :"
+
+#: src/MainView.vala:54
+msgid "GitHub"
+msgstr "GitHub"
+
+#: src/MainView.vala:60
+msgid "Site is not case-sensitive. “GitHub” equals “github”."
+msgstr "Le site n'est pas sensible à la casse. « GitHub » est équivalent à « github »."
+
+#: src/MainView.vala:63
+msgid "Cipher key:"
+msgstr "Clé de chiffrement :"
+
+#: src/MainView.vala:73
+msgid "correct horse battery staple"
+msgstr "Phrase secrète"
+
+#: src/MainView.vala:81
+msgid "Show or hide the cipher key"
+msgstr "Afficher ou masquer la clé de chiffrement"
+
+#: src/MainView.vala:87
+msgid "Derive Password"
+msgstr "Obtenir le mot de passe"
+
+#: src/MainView.vala:94
+msgid "Password:"
+msgstr "Mot de passe :"
+
+#: src/MainView.vala:110
+msgid "Show or hide the password"
+msgstr "Afficher ou masquer le mot de passe"
+
+#: src/MainView.vala:117
+msgid "Copy"
+msgstr "Copier"
+
+#: src/MainView.vala:153
+msgid "Could not derive password"
+msgstr "Impossible d'obtenir le mot de passe"

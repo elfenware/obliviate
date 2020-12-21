@@ -1,0 +1,99 @@
+# French translations for extra package.
+# Copyright (C) 2020 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Nathan Bonnemains (@NathanBnm), 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-20 15:41+0100\n"
+"PO-Revision-Date: 2020-12-20 19:05+0530\n"
+"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
+"Language-Team: Français\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: data/com.github.elfenware.obliviate.desktop.in:4
+#: data/com.github.elfenware.obliviate.appdata.xml.in:7
+msgid "Obliviate"
+msgstr "Obliviate"
+
+#: data/com.github.elfenware.obliviate.desktop.in:5
+msgid "Password Manager"
+msgstr "Gestionnaire de mots de passe"
+
+#: data/com.github.elfenware.obliviate.desktop.in:6
+msgid "Derive passwords using a cipher key"
+msgstr "Obtenez des mots de passe à l'aide d'un clé de chiffrement"
+
+#: data/com.github.elfenware.obliviate.desktop.in:8
+msgid "com.github.elfenware.obliviate"
+msgstr "com.github.elfenware.obliviate"
+
+#: data/com.github.elfenware.obliviate.desktop.in:11
+msgid "Password;Manager;Security;Generate;Derive;"
+msgstr "Mot de passe;Gestionnaire;Sécurité;"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:8
+msgid "A password manager that forgets your passwords"
+msgstr "Un gestionnaire de mots de passe qui ne stocke pas vos mots de passe"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:10
+msgid ""
+"Obliviate does not store your passwords but gives them to you when you need "
+"them. How?"
+msgstr ""
+"Obliviate ne stocke pas vos mots de passe mais vous les donne lorsque vous en avez "
+"besoin. Comment ?"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:11
+msgid "It asks you for two things:"
+msgstr "Il suffit de deux choses :"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:13
+msgid "the site you want to log in to"
+msgstr "Le site auquel vous souhaitez vous connecter"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:14
+msgid "a cipher key, which is any passphrase you can remember"
+msgstr "Une clé de chiffrement, soit n'importe quelle phrase secrète dont vous vous souviendrez"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:16
+msgid ""
+"Using these, it will derive a password, which you can set as your new "
+"password for that site."
+msgstr ""
+"En utilisant ces informations, vous obtiendrez un mot de passe que vous pourrez "
+"utiliser comme nouveau mot de passe pour ce site."
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:17
+msgid ""
+"The next time you need it, enter the same site and same cipher key. "
+"Obliviate will derive the same password as before."
+msgstr ""
+"La prochaine fois que vous en aurez besoin, tapez le même site et la même "
+"clé de chiffrement et vous obtiendrez le même mot de passe que précédemment."
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:18
+msgid "It’s not magic, but it’s quite close."
+msgstr "Ce n'est pas de la magie, mais presque."
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:19
+msgid ""
+"<em>Bonus:</em> If you need your passwords on another device, you can get "
+"them on the web from <em>obliviate.app</em>."
+msgstr ""
+"<em>Bonus :</em> Si vous avez besoin de vos mots de passe sur un autre périphérique, "
+"vous pouvez les récupérer depuis <em>obliviate.app</em>"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:24
+msgid "Initial release 🎉️"
+msgstr "Version initiale 🎉️"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:60
+msgid "Elfenware"
+msgstr "Elfenware"
