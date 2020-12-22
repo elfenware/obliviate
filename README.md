@@ -75,3 +75,8 @@ com.github.elfenware.obliviate
 
 [elementary os]: https://elementary.io
 [appcenter]: https://appcenter.elementary.io/com.github.elfenware.obliviate
+
+## Credits
+
+- [dotcypress/password](https://github.com/dotcypress/password) for the original idea
+- [nemequ/vala-extra-vapis](https://github.com/nemequ/vala-extra-vapis) for the GCrypt VAPI
