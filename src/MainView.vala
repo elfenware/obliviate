@@ -29,8 +29,12 @@ public class Obliviate.MainView : Gtk.Overlay {
     private Gtk.Entry generated_pass;
     private Gtk.ToggleButton show_generated_pass;
     private Gtk.Button copy_btn;
+    private Gtk.Label clearing_label;
+    private Gtk.ProgressBar clearing_progress;
+    private Gtk.Box clipboard_actions;
 
     private Gtk.Clipboard clipboard;
+    private const float CLIPBOARD_LIFE = 30;
 
     construct {
         grid = new Gtk.Grid () {
@@ -120,6 +124,24 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         copy_btn.clicked.connect (handle_copy);
 
+        clearing_label = new Gtk.Label (_ ("Clearing clipboard in %.0f seconds").printf (CLIPBOARD_LIFE)) {
+            margin_top = 18,
+            halign = Gtk.Align.START,
+            hexpand = false
+        };
+
+        clearing_progress = new Gtk.ProgressBar () {
+            fraction = 1
+        };
+
+        var dont_clear_btn = new Gtk.Button.with_label (_ ("Don’t Clear"));
+
+        var clear_now_btn = new Gtk.Button.with_label (_ ("Clear Now"));
+
+        clipboard_actions = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        clipboard_actions.pack_start (dont_clear_btn);
+        clipboard_actions.pack_end (clear_now_btn);
+
         grid.attach (site_label, 0, 0, 1, 1);
         grid.attach_next_to (site, site_label, Gtk.PositionType.RIGHT);
         grid.attach_next_to (site_info, site, Gtk.PositionType.RIGHT);
@@ -157,8 +179,37 @@ public class Obliviate.MainView : Gtk.Overlay {
 
     private void handle_copy () {
         clipboard.set_text (generated_pass.text, generated_pass.text.length);
+
         toast.title = _ ("Copied to clipboard");
         toast.send_notification ();
+
+        grid.attach (clearing_label, 1, 6, 1, 1);
+        grid.attach_next_to (clearing_progress, clearing_label, Gtk.PositionType.BOTTOM);
+        grid.attach_next_to (clipboard_actions, clearing_progress, Gtk.PositionType.BOTTOM);
+
+        grid.show_all ();
+
+        float seconds_left = CLIPBOARD_LIFE;
+        Timeout.add_seconds (1, () => {
+            if (seconds_left == 0) {
+                clipboard.clear ();
+
+                toast.title = _ ("Cleared the clipboard");
+                toast.send_notification ();
+
+                clearing_label.visible = false;
+                clearing_progress.visible = false;
+                clipboard_actions.visible = false;
+
+                return false;
+            }
+
+            seconds_left--;
+            clearing_label.label = _ ("Clearing clipboard in %.0f seconds").printf (seconds_left);
+            clearing_progress.fraction = seconds_left / CLIPBOARD_LIFE;
+
+            return true;
+        });
     }
 
     private void validate () {
