@@ -41,3 +41,7 @@ entry.flat {
     padding-bottom: 0;
 }
 
+entry.regenerating {
+    opacity: 0.5;
+}
+
