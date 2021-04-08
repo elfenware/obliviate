@@ -37,7 +37,7 @@ If you need your passwords on another device, you can get them on the web from [
 ## Built for elementary OS
 
 While Obliviate will happily compile on any Linux distribution, it is primarily
-built for [elementary OS].
+built for [elementary OS]. **It will be available on AppCenter with the release of elementary OS 6.0 Odin.**
 
 <!--[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)][appcenter]-->
 
