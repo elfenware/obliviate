@@ -1,0 +1,25 @@
+app-id: com.github.elfenware.obliviate
+
+runtime: io.elementary.Platform
+runtime-version: 'daily'
+sdk: io.elementary.Sdk
+
+command: com.github.elfenware.obliviate
+
+finish-args:
+  - '--share=ipc'
+  - '--socket=fallback-x11'
+  - '--socket=wayland'
+
+modules:
+  - name: gcrypt
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.8.tar.bz2
+        sha256: 895de2bb981dd127f0821d1ce13fadf7d760f9fa7737648b15f2c1fe13cc5af5
+  - name: obliviate
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
