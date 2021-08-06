@@ -32,8 +32,8 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
         add (main);
 
         set_geometry_hints (null, Gdk.Geometry () {
-            min_width = 540,
-            min_height = 420
+            min_width = 440,
+            min_height = 280
         }, Gdk.WindowHints.MIN_SIZE);
 
         settings = new GLib.Settings ("com.github.elfenware.obliviate.state");

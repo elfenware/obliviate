@@ -93,7 +93,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             margin_top = 30
         };
 
-        generated_pass.get_style_context ().add_class ("flat");
+        generated_pass.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         show_generated_pass = new Gtk.ToggleButton () {
             active = true,
@@ -105,6 +105,7 @@ public class Obliviate.MainView : Gtk.Overlay {
         show_generated_pass.bind_property ("active", generated_pass, "visibility", BindingFlags.INVERT_BOOLEAN);
 
         copy_btn = new Gtk.Button.with_label (_ ("Copy"));
+        copy_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         copy_btn.clicked.connect (handle_copy);
 
         clearing_label = new Gtk.Label (_ ("Clearing clipboard in %.0f seconds").printf (CLIPBOARD_LIFE)) {
@@ -116,6 +117,8 @@ public class Obliviate.MainView : Gtk.Overlay {
         clearing_progress = new Gtk.ProgressBar () {
             fraction = 1
         };
+
+        clearing_progress.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         grid.attach (site_label, 0, 0, 1, 1);
         grid.attach_next_to (site, site_label, Gtk.PositionType.RIGHT);

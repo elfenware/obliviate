@@ -30,6 +30,19 @@ public class Obliviate.Application : Granite.Application {
     protected override void activate () {
         window = new MainWindow (this);
 
+        var gtk_settings = Gtk.Settings.get_default ();
+        var granite_settings = Granite.Settings.get_default ();
+
+        gtk_settings.gtk_application_prefer_dark_theme = (
+            granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK
+        );
+
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            gtk_settings.gtk_application_prefer_dark_theme = (
+                granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK
+            );
+        });
+
         var provider = new Gtk.CssProvider ();
         provider.load_from_resource ("/com/github/elfenware/obliviate/Application.css");
         Gtk.StyleContext.add_provider_for_screen (
