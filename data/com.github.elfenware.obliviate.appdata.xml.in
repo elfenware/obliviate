@@ -19,6 +19,18 @@
     <p>Bonus: If you need your passwords on another device, you can get them on the web from obliviate.app.</p>
   </description>
   <releases>
+    <release version="2.0.0" date="2021-08-28">
+      <description>
+        <p>First AppCenter Release 🎉️</p>
+        <ul>
+          <li>Add: Clear clipboard 30 seconds after copying password</li>
+          <li>Add: Dark style support</li>
+          <li>Add: French translations (@NathanBnm)</li>
+          <li>Add: Spanish translations (@dar5hak, @JoseExposito)</li>
+          <li>Add: Dutch translations (@Vistaus)</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.0" date="2020-12-22">
       <description>
         <p>Initial release 🎉️</p>
