@@ -52,7 +52,7 @@ build Obliviate yourself, you'll need the following dependencies:
 - meson
 - valac
 
-You can install them on elementary OS Hera with:
+You can install them on elementary OS with:
 
 ```shell
 sudo apt install elementary-sdk libgcrypt20-dev
