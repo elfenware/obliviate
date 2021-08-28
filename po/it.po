@@ -61,7 +61,7 @@ msgstr "una chiave di cifratura, che è qualsiasi password che riesci a ricordar
 msgid ""
 "Using these, it will derive a password, which you can set as your new "
 "password for that site."
-msgstr""
+msgstr ""
 "Usando questi, ricaverà una password, che puoi impostare come tua nuova "
 "password per quel sito."
 
