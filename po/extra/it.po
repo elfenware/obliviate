@@ -82,7 +82,7 @@ msgid ""
 "<em>Bonus:</em> If you need your passwords on another device, you can get "
 "them on the web from <em>obliviate.app</em>."
 msgstr ""
-em>Bonus:</em> se hai bisogno delle tue password su un altro dispositivo, puoi ottenerle "
+"<em>Bonus:</em> se hai bisogno delle tue password su un altro dispositivo, puoi ottenerle "
 "sul web da <em>obliviate.app</em>."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:24
