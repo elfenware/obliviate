@@ -1,0 +1,65 @@
+# ITALIAN TRANSLATION FOR OBLIVIATE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.elfenware.obliviate package.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.elfenware.obliviate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-20 12:05+0100\n"
+"PO-Revision-Date: 2021-08-28 16:10+0200\n"
+"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainView.vala:43 src/MainView.vala:160
+msgid "Copied to clipboard"
+msgstr "Copiato negli appunti"
+
+#: src/MainView.vala:48
+msgid "Site:"
+msgstr "Sito:"
+
+#: src/MainView.vala:54
+msgid "GitHub"
+msgstr "GitHub"
+
+#: src/MainView.vala:60
+msgid "Site is not case-sensitive. “GitHub” equals “github”."
+msgstr "Il sito non fa distinzione tra maiuscole e minuscole. "GitHub" è uguale a "github"."
+
+#: src/MainView.vala:63
+msgid "Cipher key:"
+msgstr "Chiave di cifratura:"
+
+#: src/MainView.vala:73
+msgid "correct horse battery staple"
+msgstr "Frase segreta"
+
+#: src/MainView.vala:81
+msgid "Show or hide the cipher key"
+msgstr "Mostra o nascondi la chiave di cifratura"
+
+#: src/MainView.vala:87
+msgid "Derive Password"
+msgstr "Ottieni Password"
+
+#: src/MainView.vala:94
+msgid "Password:"
+msgstr "Password:"
+
+#: src/MainView.vala:110
+msgid "Show or hide the password"
+msgstr "Mostra o nascondi la password"
+
+#: src/MainView.vala:117
+msgid "Copy"
+msgstr "Copia"
+
+#: src/MainView.vala:153
+msgid "Could not derive password"
+msgstr "Impossibile ottenere la password"
