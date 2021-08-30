@@ -30,7 +30,7 @@ msgstr "GitHub"
 
 #: src/MainView.vala:60
 msgid "Site is not case-sensitive. “GitHub” equals “github”."
-msgstr "Il sito non fa distinzione tra maiuscole e minuscole. "GitHub" è uguale a "github"."
+msgstr "Il sito non fa distinzione tra maiuscole e minuscole. “GitHub” è uguale a “github”."
 
 #: src/MainView.vala:63
 msgid "Cipher key:"
