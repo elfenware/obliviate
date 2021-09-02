@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-20 15:41+0100\n"
+"POT-Creation-Date: 2021-09-02 20:06+0530\n"
 "PO-Revision-Date: 2020-12-20 13:26+0530\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: Français\n"
@@ -17,50 +17,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/MainView.vala:43 src/MainView.vala:160
+#: src/MainView.vala:45 src/MainView.vala:154
 msgid "Copied to clipboard"
 msgstr "Copié dans le presse-papiers"
 
-#: src/MainView.vala:48
+#: src/MainView.vala:50
 msgid "Site:"
 msgstr "Site :"
 
-#: src/MainView.vala:54
+#: src/MainView.vala:56
 msgid "GitHub"
 msgstr "GitHub"
 
-#: src/MainView.vala:60
+#: src/MainView.vala:62
 msgid "Site is not case-sensitive. “GitHub” equals “github”."
-msgstr "Le site n'est pas sensible à la casse. « GitHub » est équivalent à « github »."
+msgstr ""
+"Le site n'est pas sensible à la casse. « GitHub » est équivalent à « github "
+"»."
 
-#: src/MainView.vala:63
+#: src/MainView.vala:65
 msgid "Cipher key:"
 msgstr "Clé de chiffrement :"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:75
 msgid "correct horse battery staple"
 msgstr "Phrase secrète"
 
-#: src/MainView.vala:81
+#: src/MainView.vala:83
 msgid "Show or hide the cipher key"
 msgstr "Afficher ou masquer la clé de chiffrement"
 
-#: src/MainView.vala:87
-msgid "Derive Password"
-msgstr "Obtenir le mot de passe"
-
-#: src/MainView.vala:94
-msgid "Password:"
-msgstr "Mot de passe :"
-
-#: src/MainView.vala:110
+#: src/MainView.vala:100
 msgid "Show or hide the password"
 msgstr "Afficher ou masquer le mot de passe"
 
-#: src/MainView.vala:117
+#: src/MainView.vala:107
 msgid "Copy"
 msgstr "Copier"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:111 src/MainView.vala:172
+#, c-format
+msgid "Clearing clipboard in %.0f seconds"
+msgstr ""
+
+#: src/MainView.vala:145
 msgid "Could not derive password"
 msgstr "Impossible d'obtenir le mot de passe"
+
+#: src/MainView.vala:164
+msgid "Cleared the clipboard"
+msgstr ""
+
+#~ msgid "Derive Password"
+#~ msgstr "Obtenir le mot de passe"
+
+#~ msgid "Password:"
+#~ msgstr "Mot de passe :"

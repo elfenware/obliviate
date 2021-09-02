@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-20 17:56+0530\n"
+"POT-Creation-Date: 2021-09-02 20:10+0530\n"
 "PO-Revision-Date: 2021-08-28 16:22+0200\n"
 "Last-Translator: Albano Battistella <albano_battistellaòhotmail.com>\n"
 "Language-Team: ITALIAN <LL@li.org>\n"
@@ -28,6 +28,10 @@ msgstr "Gestore di Password"
 #: data/com.github.elfenware.obliviate.desktop.in:6
 msgid "Derive passwords using a cipher key"
 msgstr "Ottieni password utilizzando una chiave di crittografia"
+
+#: data/com.github.elfenware.obliviate.desktop.in:8
+msgid "com.github.elfenware.obliviate"
+msgstr ""
 
 #: data/com.github.elfenware.obliviate.desktop.in:11
 msgid "Password;Manager;Security;Generate;Derive;"
@@ -55,7 +59,8 @@ msgstr "il sito a cui vuoi accedere"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:14
 msgid "a cipher key, which is any passphrase you can remember"
-msgstr "una chiave di cifratura, che è qualsiasi password che riesci a ricordare"
+msgstr ""
+"una chiave di cifratura, che è qualsiasi password che riesci a ricordare"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:16
 msgid ""
@@ -70,8 +75,8 @@ msgid ""
 "The next time you need it, enter the same site and same cipher key. "
 "Obliviate will derive the same password as before."
 msgstr ""
-"La prossima volta che ne hai bisogno, inserisci lo stesso sito e la stessa chiave di cifratura. "
-"Obliviate ricaverà la stessa password di prima."
+"La prossima volta che ne hai bisogno, inserisci lo stesso sito e la stessa "
+"chiave di cifratura. Obliviate ricaverà la stessa password di prima."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:18
 msgid "It’s not magic, but it’s quite close."
@@ -79,16 +84,40 @@ msgstr "Non è magico, ma è abbastanza vicino."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:19
 msgid ""
-"<em>Bonus:</em> If you need your passwords on another device, you can get "
-"them on the web from <em>obliviate.app</em>."
+"Bonus: If you need your passwords on another device, you can get them on the "
+"web from obliviate.app."
 msgstr ""
-"<em>Bonus:</em> se hai bisogno delle tue password su un altro dispositivo, puoi ottenerle "
-"sul web da <em>obliviate.app</em>."
+"Bonus: se hai bisogno delle tue password su un altro dispositivo, "
+"puoi ottenerle sul web da obliviate.app."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:24
+msgid "First AppCenter Release 🎉️"
+msgstr ""
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:26
+msgid "Add: Clear clipboard 30 seconds after copying password"
+msgstr ""
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:27
+msgid "Add: Dark style support"
+msgstr "Aggiunto: supporto per lo stile scuro"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:28
+msgid "Add: French translations (@NathanBnm)"
+msgstr "Aggiunto: traduzione in francese (@NathanBnm)"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:29
+msgid "Add: Spanish translations (@dar5hak, @JoseExposito)"
+msgstr "Aggiunta: traduzione in spagnolo (@dar5hak, @JoseExposito)"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:30
+msgid "Add: Dutch translations (@Vistaus)"
+msgstr "Aggiunto: traduzione in olandese (@Vistaus)"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:36
 msgid "Initial release 🎉️"
 msgstr "Rilascio iniziale 🎉️"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:60
+#: data/com.github.elfenware.obliviate.appdata.xml.in:72
 msgid "Elfenware"
 msgstr "Elfenware"
