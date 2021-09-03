@@ -96,7 +96,7 @@ msgstr "Prima versione AppCenter 🎉️"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:26
 msgid "Add: Clear clipboard 30 seconds after copying password"
-msgstr "Aggiunto:Cancella gli appunti 30 secondi dopo aver copiato la password"
+msgstr "Aggiunto: Cancella gli appunti 30 secondi dopo aver copiato la password"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:27
 msgid "Add: Dark style support"
