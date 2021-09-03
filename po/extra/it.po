@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-02 20:10+0530\n"
-"PO-Revision-Date: 2021-08-28 16:22+0200\n"
+"PO-Revision-Date: 2021-09-03 16:03+0100\n"
 "Last-Translator: Albano Battistella <albano_battistellaòhotmail.com>\n"
 "Language-Team: ITALIAN <LL@li.org>\n"
 "Language: it\n"
@@ -31,7 +31,7 @@ msgstr "Ottieni password utilizzando una chiave di crittografia"
 
 #: data/com.github.elfenware.obliviate.desktop.in:8
 msgid "com.github.elfenware.obliviate"
-msgstr ""
+msgstr "com.github.elfenware.obliviate"
 
 #: data/com.github.elfenware.obliviate.desktop.in:11
 msgid "Password;Manager;Security;Generate;Derive;"
@@ -92,11 +92,11 @@ msgstr ""
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:24
 msgid "First AppCenter Release 🎉️"
-msgstr ""
+msgstr "Prima versione AppCenter 🎉️"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:26
 msgid "Add: Clear clipboard 30 seconds after copying password"
-msgstr ""
+msgstr "Aggiunto: Cancella gli appunti 30 secondi dopo aver copiato la password"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:27
 msgid "Add: Dark style support"
