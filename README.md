@@ -1,5 +1,3 @@
-<!--[![Build Status](https://travis-ci.org/elfenware/obliviate.svg?branch=master)](https://travis-ci.org/elfenware/obliviate)-->
-
 <p align="center">
    <img src="data/icons/128/com.github.elfenware.obliviate.svg" alt="Icon" />
 </p>
@@ -7,12 +5,12 @@
 <h1 align="center">Obliviate</h1>
 <p align="center">A password manager that forgets your passwords</p>
 
-<!--<p align="center">-->
-<!--  <a href="https://appcenter.elementary.io/com.github.elfenware.obliviate"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>-->
-<!--</p>-->
+<p align="center">
+  <a href="https://appcenter.elementary.io/com.github.elfenware.obliviate"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
+</p>
 
 <p align="center">
-    <img src="data/window-screenshot.png" alt="Screenshot">
+  <img src="data/window-screenshot.png" alt="Screenshot">
 </p>
 
 ## Description
@@ -39,7 +37,7 @@ If you need your passwords on another device, you can get them on the web from [
 While Obliviate will happily compile on any Linux distribution, it is primarily
 built for [elementary OS]. **It will soon be available on AppCenter.**
 
-<!--[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)][appcenter]-->
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)][appcenter]
 
 ## Developing and building
 
