@@ -27,7 +27,7 @@ jobs:
       - name: Build
         uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
         with:
-          bundle: badger.flatpak
+          bundle: obliviate.flatpak
           manifest-path: com.github.elfenware.obliviate.yml
           run-tests: true
           repository-name: appcenter
