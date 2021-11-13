@@ -6,5 +6,5 @@ Comment=Derive passwords using a cipher key
 Exec=com.github.elfenware.obliviate %U
 Icon=com.github.elfenware.obliviate
 Terminal=false
-Categories=Utility;GTK;
+Categories=Utility;GTK;Security;
 Keywords=Password;Manager;Security;Generate;Derive;
