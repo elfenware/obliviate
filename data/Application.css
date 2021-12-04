@@ -31,12 +31,17 @@
 
 entry.flat {
     background: transparent;
-    border: none;
+    border: 1px dashed @accent_color;
     font-weight: bold;
     padding-bottom: 0;
 }
 
 entry.regenerating {
     opacity: 0.5;
+}
+
+.sign {
+    color: @insensitive_fg_color;
+    font-size: x-large;
 }
 

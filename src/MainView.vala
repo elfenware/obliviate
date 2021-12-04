@@ -89,8 +89,7 @@ public class Obliviate.MainView : Gtk.Overlay {
         generated_pass = new Gtk.Entry () {
             visibility = false,
             editable = false,
-            sensitive = false,
-            margin_top = 30
+            sensitive = false
         };
 
         generated_pass.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
@@ -98,13 +97,16 @@ public class Obliviate.MainView : Gtk.Overlay {
         show_generated_pass = new Gtk.ToggleButton () {
             active = true,
             tooltip_text = _ ("Show or hide the password"),
-            margin_top = 30
+            sensitive = false
         };
 
         show_generated_pass.add (new Gtk.Image.from_icon_name ("image-red-eye-symbolic", Gtk.IconSize.BUTTON));
         show_generated_pass.bind_property ("active", generated_pass, "visibility", BindingFlags.INVERT_BOOLEAN);
 
-        copy_btn = new Gtk.Button.with_label (_ ("Copy"));
+        copy_btn = new Gtk.Button.with_label (_ ("Copy")) {
+            sensitive = false
+        };
+
         copy_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         copy_btn.clicked.connect (handle_copy);
 
@@ -120,26 +122,43 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         clearing_progress.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
+        var plus_label = new Gtk.Label ("+");
+        plus_label.get_style_context ().add_class ("sign");
+
+        var equals_label = new Gtk.Label ("=");
+        equals_label.get_style_context ().add_class ("sign");
+
         grid.attach (site_label, 0, 0, 1, 1);
         grid.attach_next_to (site, site_label, Gtk.PositionType.RIGHT);
         grid.attach_next_to (site_info, site, Gtk.PositionType.RIGHT);
 
-        grid.attach (cipher_key_label, 0, 1, 1, 1);
+        grid.attach_next_to (plus_label, site, Gtk.PositionType.BOTTOM);
+
+        grid.attach (cipher_key_label, 0, 2, 1, 1);
         grid.attach_next_to (cipher_key, cipher_key_label, Gtk.PositionType.RIGHT);
         grid.attach_next_to (show_cipher_key, cipher_key, Gtk.PositionType.RIGHT);
+
+        grid.attach_next_to (equals_label, cipher_key, Gtk.PositionType.BOTTOM);
+
+        grid.attach_next_to (generated_pass, equals_label, Gtk.PositionType.BOTTOM);
+        grid.attach_next_to (show_generated_pass, generated_pass, Gtk.PositionType.RIGHT);
+        grid.attach_next_to (copy_btn, generated_pass, Gtk.PositionType.BOTTOM);
 
         clipboard = Gtk.Clipboard.get_default (Gdk.Display.get_default ());
     }
 
     private void handle_generate_password () {
         if (site.text.length == 0 || cipher_key.text.length == 0) {
-            hide_password_widgets ();
+            generated_pass.text = "";
+            show_generated_pass.sensitive = false;
+            copy_btn.sensitive = false;
             return;
         }
 
         try {
             generated_pass.text = Crypto.derive_password (cipher_key.text, site.text.down ());
-            show_password_widgets ();
+            show_generated_pass.sensitive = true;
+            copy_btn.sensitive = true;
             animate_password ();
         } catch (CryptoError error) {
             toast.title = _ ("Could not derive password");
@@ -174,24 +193,6 @@ public class Obliviate.MainView : Gtk.Overlay {
 
             return true;
         });
-    }
-
-    private void show_password_widgets () {
-        if (grid.get_child_at (1, 4) != generated_pass) {
-            grid.attach (generated_pass, 1, 4, 1, 1);
-            grid.attach_next_to (show_generated_pass, generated_pass, Gtk.PositionType.RIGHT);
-            grid.attach_next_to (copy_btn, generated_pass, Gtk.PositionType.BOTTOM);
-        }
-
-        generated_pass.visible = true;
-        show_generated_pass.show_all ();
-        copy_btn.visible = true;
-    }
-
-    private void hide_password_widgets () {
-        generated_pass.visible = false;
-        show_generated_pass.visible = false;
-        copy_btn.visible = false;
     }
 
     private void show_clearing_widgets () {
