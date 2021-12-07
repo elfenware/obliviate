@@ -64,6 +64,20 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
         header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
         header.get_style_context ().add_class ("headerbar");
 
+        var help_btn = new Gtk.Button.from_icon_name ("help-contents") {
+            tooltip_text = _("Help and FAQ")
+        };
+
+        help_btn.clicked.connect (() => {
+            try {
+                AppInfo.launch_default_for_uri ("https://github.com/elfenware/obliviate/wiki/Help-and-FAQ", null);
+            } catch (Error e) {
+                warning ("%s\n", e.message);
+            }
+        });
+
+        header.pack_end (help_btn);
+
         return header;
     }
 
