@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-02 20:06+0530\n"
+"POT-Creation-Date: 2021-12-07 22:39+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainView.vala:45 src/MainView.vala:154
+#: src/MainWindow.vala:68
+msgid "Help and FAQ"
+msgstr ""
+
+#: src/MainView.vala:45 src/MainView.vala:173
 msgid "Copied to clipboard"
 msgstr ""
 
@@ -45,23 +49,23 @@ msgstr ""
 msgid "Show or hide the cipher key"
 msgstr ""
 
-#: src/MainView.vala:100
+#: src/MainView.vala:99
 msgid "Show or hide the password"
 msgstr ""
 
-#: src/MainView.vala:107
+#: src/MainView.vala:106
 msgid "Copy"
 msgstr ""
 
-#: src/MainView.vala:111 src/MainView.vala:172
+#: src/MainView.vala:113 src/MainView.vala:191
 #, c-format
 msgid "Clearing clipboard in %.0f seconds"
 msgstr ""
 
-#: src/MainView.vala:145
+#: src/MainView.vala:164
 msgid "Could not derive password"
 msgstr ""
 
-#: src/MainView.vala:164
+#: src/MainView.vala:183
 msgid "Cleared the clipboard"
 msgstr ""
