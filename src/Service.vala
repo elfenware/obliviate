@@ -22,7 +22,7 @@ public errordomain Obliviate.CryptoError {
     DERIVATION_FAILED
 }
 
-public class Obliviate.Crypto : GLib.Object {
+public class Obliviate.Service : GLib.Object {
     public static string derive_password (string cipher_key, string salt) throws CryptoError {
         var keybuffer = new uint8[16];
 
@@ -59,5 +59,10 @@ public class Obliviate.Crypto : GLib.Object {
         }
 
         return derived_characters.str;
+    }
+
+    public static string remove_symbols (string str) {
+        var regex = new Regex ("[^a-zA-Z0-9]");
+        return regex.replace (str, str.length, 0, "");
     }
 }
