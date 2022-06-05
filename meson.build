@@ -2,7 +2,7 @@
 project (
     'com.github.elfenware.obliviate',
     'vala', 'c',
-    version: '2.1.0'
+    version: '2.3.0'
 )
 
 # Translation module
