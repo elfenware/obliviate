@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-02 20:06+0530\n"
+"POT-Creation-Date: 2022-06-05 18:59+0530\n"
 "PO-Revision-Date: 2020-12-20 13:26+0530\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: Français\n"
@@ -17,33 +17,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/MainView.vala:45 src/MainView.vala:154
+#: src/MainWindow.vala:68
+msgid "Help and FAQ"
+msgstr ""
+
+#: src/MainView.vala:46 src/MainView.vala:196
 msgid "Copied to clipboard"
 msgstr "Copié dans le presse-papiers"
 
-#: src/MainView.vala:50
+#: src/MainView.vala:51
 msgid "Site:"
 msgstr "Site :"
 
-#: src/MainView.vala:56
+#: src/MainView.vala:57
 msgid "GitHub"
 msgstr "GitHub"
 
-#: src/MainView.vala:62
+#: src/MainView.vala:63
 msgid "Site is not case-sensitive. “GitHub” equals “github”."
 msgstr ""
 "Le site n'est pas sensible à la casse. « GitHub » est équivalent à « github "
 "»."
 
-#: src/MainView.vala:65
+#: src/MainView.vala:66
 msgid "Cipher key:"
 msgstr "Clé de chiffrement :"
 
-#: src/MainView.vala:75
+#: src/MainView.vala:76
 msgid "correct horse battery staple"
 msgstr "Phrase secrète"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:84
 msgid "Show or hide the cipher key"
 msgstr "Afficher ou masquer la clé de chiffrement"
 
@@ -55,16 +59,20 @@ msgstr "Afficher ou masquer le mot de passe"
 msgid "Copy"
 msgstr "Copier"
 
-#: src/MainView.vala:111 src/MainView.vala:172
+#: src/MainView.vala:117
+msgid "Copy without symbols"
+msgstr ""
+
+#: src/MainView.vala:129 src/MainView.vala:214
 #, c-format
 msgid "Clearing clipboard in %.0f seconds"
 msgstr ""
 
-#: src/MainView.vala:145
+#: src/MainView.vala:182
 msgid "Could not derive password"
 msgstr "Impossible d'obtenir le mot de passe"
 
-#: src/MainView.vala:164
+#: src/MainView.vala:206
 msgid "Cleared the clipboard"
 msgstr ""
 

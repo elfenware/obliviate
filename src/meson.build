@@ -3,5 +3,5 @@ sources = files (
     'Application.vala',
     'MainWindow.vala',
     'MainView.vala',
-    'Crypto.vala'
+    'Service.vala'
 )

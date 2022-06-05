@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-02 20:10+0530\n"
+"POT-Creation-Date: 2022-06-05 19:22+0530\n"
 "PO-Revision-Date: 2021-08-21 17:11+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -89,37 +89,53 @@ msgid ""
 "Bonus: If you need your passwords on another device, you can get them on the "
 "web from obliviate.app."
 msgstr ""
-"Bonus: als je je wachtwoorden op een ander apparaat nodig hebt, dan "
-"kun je ze opvragen via obliviate.app."
+"Bonus: als je je wachtwoorden op een ander apparaat nodig hebt, dan kun je "
+"ze opvragen via obliviate.app."
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:24
-msgid "First AppCenter Release 🎉️"
+#: data/com.github.elfenware.obliviate.appdata.xml.in:25
+msgid "Add: “Copy without symbols” button"
 msgstr ""
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:26
+msgid "Add: “Help and FAQ” button"
+msgstr ""
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:33
+msgid "Update: Use elementary Platform 7"
+msgstr ""
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:40
+msgid "Add: Italian translations (@albanobattistella)"
+msgstr ""
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:46
+msgid "First AppCenter Release 🎉️"
+msgstr ""
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:48
 msgid "Add: Clear clipboard 30 seconds after copying password"
 msgstr ""
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:27
+#: data/com.github.elfenware.obliviate.appdata.xml.in:49
 msgid "Add: Dark style support"
 msgstr ""
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:28
+#: data/com.github.elfenware.obliviate.appdata.xml.in:50
 msgid "Add: French translations (@NathanBnm)"
 msgstr ""
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:29
+#: data/com.github.elfenware.obliviate.appdata.xml.in:51
 msgid "Add: Spanish translations (@dar5hak, @JoseExposito)"
 msgstr ""
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:30
+#: data/com.github.elfenware.obliviate.appdata.xml.in:52
 msgid "Add: Dutch translations (@Vistaus)"
 msgstr ""
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:36
+#: data/com.github.elfenware.obliviate.appdata.xml.in:58
 msgid "Initial release 🎉️"
 msgstr "Initiële uitgave 🎉️"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:72
+#: data/com.github.elfenware.obliviate.appdata.xml.in:94
 msgid "Elfenware"
 msgstr "Elfenware"

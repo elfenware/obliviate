@@ -18,20 +18,13 @@
  *
  */
 
-@define-color accent_color @BLACK_100;
-
-*:active,
-.toggle:checked:focus {
-    border: 1px solid @accent_color;
-}
-
 .headerbar {
     box-shadow: none;
 }
 
 entry.flat {
     background: transparent;
-    border: 1px dashed @accent_color;
+    border: 1px dashed;
     font-weight: bold;
     padding-bottom: 0;
 }

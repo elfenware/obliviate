@@ -27,6 +27,7 @@ public class Obliviate.MainView : Gtk.Overlay {
     private Gtk.Entry generated_pass;
     private Gtk.ToggleButton show_generated_pass;
     private Gtk.Button copy_btn;
+    private Gtk.Button copy_without_symbols_btn;
     private Gtk.Label clearing_label;
     private Gtk.ProgressBar clearing_progress;
 
@@ -108,7 +109,22 @@ public class Obliviate.MainView : Gtk.Overlay {
         };
 
         copy_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-        copy_btn.clicked.connect (handle_copy);
+
+        copy_btn.clicked.connect (() => {
+            handle_copy ();
+        });
+
+        copy_without_symbols_btn = new Gtk.Button.with_label (_ ("Copy without symbols")) {
+            sensitive = false
+        };
+
+        copy_without_symbols_btn.clicked.connect (() => {
+            handle_copy (true);
+        });
+
+        var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        button_box.pack_start (copy_btn);
+        button_box.pack_end (copy_without_symbols_btn);
 
         clearing_label = new Gtk.Label (_ ("Clearing clipboard in %.0f seconds").printf (CLIPBOARD_LIFE)) {
             margin_top = 18,
@@ -142,7 +158,7 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         grid.attach_next_to (generated_pass, equals_label, Gtk.PositionType.BOTTOM);
         grid.attach_next_to (show_generated_pass, generated_pass, Gtk.PositionType.RIGHT);
-        grid.attach_next_to (copy_btn, generated_pass, Gtk.PositionType.BOTTOM);
+        grid.attach_next_to (button_box, generated_pass, Gtk.PositionType.BOTTOM);
 
         clipboard = Gtk.Clipboard.get_default (Gdk.Display.get_default ());
     }
@@ -152,13 +168,15 @@ public class Obliviate.MainView : Gtk.Overlay {
             generated_pass.text = "";
             show_generated_pass.sensitive = false;
             copy_btn.sensitive = false;
+            copy_without_symbols_btn.sensitive = false;
             return;
         }
 
         try {
-            generated_pass.text = Crypto.derive_password (cipher_key.text, site.text.down ());
+            generated_pass.text = Service.derive_password (cipher_key.text, site.text.down ());
             show_generated_pass.sensitive = true;
             copy_btn.sensitive = true;
+            copy_without_symbols_btn.sensitive = true;
             animate_password ();
         } catch (CryptoError error) {
             toast.title = _ ("Could not derive password");
@@ -166,9 +184,14 @@ public class Obliviate.MainView : Gtk.Overlay {
         }
     }
 
-    private void handle_copy () {
+    private void handle_copy (bool ignore_symbols = false) {
         Source.remove (timeout_id);
-        clipboard.set_text (generated_pass.text, generated_pass.text.length);
+
+        var text_to_copy = ignore_symbols
+            ? Service.remove_symbols (generated_pass.text)
+            : generated_pass.text;
+
+        clipboard.set_text (text_to_copy, generated_pass.text.length);
 
         toast.title = _ ("Copied to clipboard");
         toast.send_notification ();
