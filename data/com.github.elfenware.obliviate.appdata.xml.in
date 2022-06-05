@@ -19,7 +19,7 @@
     <p>Bonus: If you need your passwords on another device, you can get them on the web from obliviate.app.</p>
   </description>
   <releases>
-    <release version="2.2.0" date="2022-06-05">
+    <release version="2.3.0" date="2022-06-05">
       <description>
         <ul>
           <li>Update: Use elementary Platform 7</li>
