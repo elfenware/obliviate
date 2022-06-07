@@ -1,14 +1,14 @@
 # ITALIAN TRANSLATION FOR OBLIVIATE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.elfenware.obliviate package.
-# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021,2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-05 18:59+0530\n"
-"PO-Revision-Date: 2021-09-03 16:10+0100\n"
+"PO-Revision-Date: 2022-06-05 17:10+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: src/MainWindow.vala:68
 msgid "Help and FAQ"
-msgstr ""
+msgstr "Aiuto e FAQ"
 
 #: src/MainView.vala:46 src/MainView.vala:196
 msgid "Copied to clipboard"
@@ -35,7 +35,7 @@ msgstr "GitHub"
 #: src/MainView.vala:63
 msgid "Site is not case-sensitive. “GitHub” equals “github”."
 msgstr ""
-"Il sito non fa distinzione tra maiuscole e minuscole. “GitHub” è uguale a "
+"Il sito non distingue tra maiuscole e minuscole. “GitHub” è uguale a "
 "“github”."
 
 #: src/MainView.vala:66
@@ -60,7 +60,7 @@ msgstr "Copia"
 
 #: src/MainView.vala:117
 msgid "Copy without symbols"
-msgstr ""
+msgstr "Copia senza simboli"
 
 #: src/MainView.vala:129 src/MainView.vala:214
 #, c-format
