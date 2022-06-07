@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-05 18:59+0530\n"
-"PO-Revision-Date: 2021-08-21 17:12+0200\n"
+"PO-Revision-Date: 2022-06-05 19:32+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: src/MainWindow.vala:68
 msgid "Help and FAQ"
-msgstr ""
+msgstr "Hulp en veelgestelde vragen"
 
 #: src/MainView.vala:46 src/MainView.vala:196
 msgid "Copied to clipboard"
@@ -62,21 +62,20 @@ msgstr "Kopiëren"
 
 #: src/MainView.vala:117
 msgid "Copy without symbols"
-msgstr ""
+msgstr "Kopiëren zonder speciale tekens"
 
 #: src/MainView.vala:129 src/MainView.vala:214
 #, c-format
 msgid "Clearing clipboard in %.0f seconds"
-msgstr ""
+msgstr "Het klembord wordt over %.0f seconden gewist"
 
 #: src/MainView.vala:182
 msgid "Could not derive password"
 msgstr "Het wachtwoord kan niet worden opgehaald"
 
 #: src/MainView.vala:206
-#, fuzzy
 msgid "Cleared the clipboard"
-msgstr "Gekopieerd naar het klembord"
+msgstr "Het klembord is gewist"
 
 #~ msgid "Derive Password"
 #~ msgstr "Wachtwoord ophalen"
