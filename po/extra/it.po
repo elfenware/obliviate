@@ -92,7 +92,7 @@ msgstr ""
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:25
 msgid "Add: “Copy without symbols” button"
-msgstr "Aggiunto: pulsante "Copia senza simboli"."
+msgstr "Aggiunto: pulsante “Copia senza simboli”."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:26
 msgid "Add: “Help and FAQ” button"
