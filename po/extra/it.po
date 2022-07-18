@@ -1,14 +1,14 @@
 # ITALIAN TRANSLATION.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2021,2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-05 19:22+0530\n"
-"PO-Revision-Date: 2021-09-03 16:03+0100\n"
+"PO-Revision-Date: 2022-06-05 17:03+0100\n"
 "Last-Translator: Albano Battistella <albano_battistellaòhotmail.com>\n"
 "Language-Team: ITALIAN <LL@li.org>\n"
 "Language: it\n"
@@ -92,20 +92,19 @@ msgstr ""
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:25
 msgid "Add: “Copy without symbols” button"
-msgstr ""
+msgstr "Aggiunto: pulsante “Copia senza simboli”."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:26
 msgid "Add: “Help and FAQ” button"
-msgstr ""
+msgstr "Aggiunto: Pulsante “Aiuto e FAQ”."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:33
 msgid "Update: Use elementary Platform 7"
-msgstr ""
+msgstr "Aggiornato: Usa la piattaforma elementary 7"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:40
-#, fuzzy
 msgid "Add: Italian translations (@albanobattistella)"
-msgstr "Aggiunto: traduzione in olandese (@Vistaus)"
+msgstr "Aggiunto: traduzione in italiano (@albanobattistella)"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:46
 msgid "First AppCenter Release 🎉️"
