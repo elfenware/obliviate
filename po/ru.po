@@ -1,0 +1,74 @@
+# Russian translations for com.github.elfenware.obliviate
+# Copyright (C) 2022 THE com.github.elfenware.obliviate'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.elfenware.obliviate package.
+# lenemter <lenemter@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.elfenware.obliviate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 14:45+0900\n"
+"PO-Revision-Date: 2022-11-04 14:19+0900\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.vala:68
+msgid "Help and FAQ"
+msgstr "Помощь и ЧаВО"
+
+#: src/MainView.vala:46 src/MainView.vala:196
+msgid "Copied to clipboard"
+msgstr "Скопировано в буфер обмена"
+
+#: src/MainView.vala:51
+msgid "Site:"
+msgstr "Сайт:"
+
+#: src/MainView.vala:57
+msgid "GitHub"
+msgstr "GitHub"
+
+#: src/MainView.vala:63
+msgid "Site is not case-sensitive. “GitHub” equals “github”."
+msgstr "Сайт не зависит от регистра. «GitHub» равно «github»."
+
+#: src/MainView.vala:66
+msgid "Cipher key:"
+msgstr "Ключ шифрования:"
+
+#: src/MainView.vala:76
+msgid "correct horse battery staple"
+msgstr "correct horse battery staple"
+
+#: src/MainView.vala:84
+msgid "Show or hide the cipher key"
+msgstr "Показать или спрятать ключ шифрования"
+
+#: src/MainView.vala:100
+msgid "Show or hide the password"
+msgstr "Показать или спрятать пароль"
+
+#: src/MainView.vala:107
+msgid "Copy"
+msgstr "Копировать"
+
+#: src/MainView.vala:117
+msgid "Copy without symbols"
+msgstr "Копировать без символов"
+
+#: src/MainView.vala:129 src/MainView.vala:214
+#, c-format
+msgid "Clearing clipboard in %.0f seconds"
+msgstr "Буфер обмена будет очищен через %.0f секунд"
+
+#: src/MainView.vala:182
+msgid "Could not derive password"
+msgstr "Не удалось получить пароль"
+
+#: src/MainView.vala:206
+msgid "Cleared the clipboard"
+msgstr "Буфер обмена очищен"

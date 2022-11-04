@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-05 19:22+0530\n"
+"POT-Creation-Date: 2022-11-04 14:44+0900\n"
 "PO-Revision-Date: 2022-06-05 19:37+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -30,10 +30,6 @@ msgstr "Wachtwoordbeheerder"
 #: data/com.github.elfenware.obliviate.desktop.in:6
 msgid "Derive passwords using a cipher key"
 msgstr "Haal wachtwoorden op met een toegangssleutel"
-
-#: data/com.github.elfenware.obliviate.desktop.in:8
-msgid "com.github.elfenware.obliviate"
-msgstr "com.github.elfenware.obliviate"
 
 #: data/com.github.elfenware.obliviate.desktop.in:11
 msgid "Password;Manager;Security;Generate;Derive;"
@@ -100,42 +96,55 @@ msgstr "Nieuw: optie om te kopiëren zonder speciale tekens"
 msgid "Add: “Help and FAQ” button"
 msgstr "Nieuw: hulp en veelgestelde vragen"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:33
+#: data/com.github.elfenware.obliviate.appdata.xml.in:27
+#, fuzzy
+msgid "Update: Dutch translations (@Vistaus)"
+msgstr "Nieuw: Nederlandse vertaling (met dank aan @Vistaus)"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:28
+#, fuzzy
+msgid "Update: Italian translations (@albanobattistella)"
+msgstr "Nieuw: Italiaanse vertaling (met dank aan @albanobattistella)"
+
+#: data/com.github.elfenware.obliviate.appdata.xml.in:35
 msgid "Update: Use elementary Platform 7"
 msgstr "Bijgewerkt: elementary-platform 7"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:40
+#: data/com.github.elfenware.obliviate.appdata.xml.in:42
 msgid "Add: Italian translations (@albanobattistella)"
 msgstr "Nieuw: Italiaanse vertaling (met dank aan @albanobattistella)"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:46
+#: data/com.github.elfenware.obliviate.appdata.xml.in:48
 msgid "First AppCenter Release 🎉️"
 msgstr "De allereerste AppCenter-versie! 🥳"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:48
+#: data/com.github.elfenware.obliviate.appdata.xml.in:50
 msgid "Add: Clear clipboard 30 seconds after copying password"
 msgstr "Nieuw: het klembord wordt 30 seconden na het kopiëren gewist"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:49
+#: data/com.github.elfenware.obliviate.appdata.xml.in:51
 msgid "Add: Dark style support"
 msgstr "Nieuw: ondersteuning voor donkere thema's"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:50
+#: data/com.github.elfenware.obliviate.appdata.xml.in:52
 msgid "Add: French translations (@NathanBnm)"
 msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:51
+#: data/com.github.elfenware.obliviate.appdata.xml.in:53
 msgid "Add: Spanish translations (@dar5hak, @JoseExposito)"
 msgstr "Nieuw: Spaanse vertaling (met dank aan @dar5hak en @JoseExposito)"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:52
+#: data/com.github.elfenware.obliviate.appdata.xml.in:54
 msgid "Add: Dutch translations (@Vistaus)"
 msgstr "Nieuw: Nederlandse vertaling (met dank aan @Vistaus)"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:58
+#: data/com.github.elfenware.obliviate.appdata.xml.in:60
 msgid "Initial release 🎉️"
 msgstr "De allereerste versie! 🥳"
 
-#: data/com.github.elfenware.obliviate.appdata.xml.in:94
+#: data/com.github.elfenware.obliviate.appdata.xml.in:96
 msgid "Elfenware"
 msgstr "Elfenware"
+
+#~ msgid "com.github.elfenware.obliviate"
+#~ msgstr "com.github.elfenware.obliviate"
