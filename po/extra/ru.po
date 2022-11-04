@@ -86,7 +86,7 @@ msgid ""
 "Bonus: If you need your passwords on another device, you can get them on the "
 "web from obliviate.app."
 msgstr ""
-"Бонус: Если вам понадобится ваш парольна другом устройстве, вы можете "
+"Бонус: Если вам понадобится ваш пароль на другом устройстве, вы можете "
 "получить его онлайн на obliviate.app."
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:25
