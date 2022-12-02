@@ -47,6 +47,7 @@ build Obliviate yourself, you'll need the following dependencies:
 - libgranite-dev
 - libgtk-3-dev
 - libgcrypt20-dev
+- libhandy-1-dev
 - meson
 - valac
 

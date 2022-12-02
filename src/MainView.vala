@@ -45,7 +45,7 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         toast = new Granite.Widgets.Toast (_ ("Copied to clipboard"));
 
-        add_overlay (grid);
+        add (grid);
         add_overlay (toast);
 
         var site_label = new Gtk.Label (_ ("Site:")) {

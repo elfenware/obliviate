@@ -18,7 +18,7 @@
  *
  */
 
-public class Obliviate.MainWindow : Gtk.ApplicationWindow {
+public class Obliviate.MainWindow : Hdy.ApplicationWindow {
     private GLib.Settings settings;
 
     public MainWindow (Gtk.Application app) {
@@ -26,10 +26,15 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        set_titlebar (get_header ());
+        Hdy.init ();
+        var header = get_header ();
 
         var main = new MainView ();
-        add (main);
+
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        box.add (header);
+        box.add (main);
+        add (box);
 
         set_geometry_hints (null, Gdk.Geometry () {
             min_width = 440,
@@ -54,8 +59,8 @@ public class Obliviate.MainWindow : Gtk.ApplicationWindow {
         });
     }
 
-    private Gtk.HeaderBar get_header () {
-        var header = new Gtk.HeaderBar () {
+    private Hdy.HeaderBar get_header () {
+        var header = new Hdy.HeaderBar () {
             title = "Obliviate",
             has_subtitle = false,
             show_close_button = true
