@@ -103,7 +103,7 @@ msgstr "Adición: traducción en neerlandés (@Vistaus)"
 #: data/com.github.elfenware.obliviate.appdata.xml.in:28
 #, fuzzy
 msgid "Update: Italian translations (@albanobattistella)"
-msgstr "Adición: traducción en neerlandés (@Vistaus)"
+msgstr "Adición: traducción en italiano (@ albanobattistella)"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:35
 msgid "Update: Use elementary Platform 7"
