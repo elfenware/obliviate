@@ -211,7 +211,11 @@ public class Obliviate.MainView : Gtk.Overlay {
             }
 
             seconds_left--;
-            clearing_label.label = _ ("Clearing clipboard in %.0f seconds").printf (seconds_left);
+            clearing_label.label = ngettext (
+                "Clearing clipboard in %.0f second",
+                "Clearing clipboard in %.0f seconds",
+                (ulong) seconds_left
+            ).printf (seconds_left);
             clearing_progress.fraction = seconds_left / CLIPBOARD_LIFE;
 
             return true;
