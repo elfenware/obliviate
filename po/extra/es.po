@@ -112,7 +112,7 @@ msgstr ""
 #: data/com.github.elfenware.obliviate.appdata.xml.in:42
 #, fuzzy
 msgid "Add: Italian translations (@albanobattistella)"
-msgstr "Adición: traducción en neerlandés (@Vistaus)"
+msgstr "Adición: traducción en italiano (@ albanobattistella)"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:48
 msgid "First AppCenter Release 🎉️"
