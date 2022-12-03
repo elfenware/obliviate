@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-05 18:59+0530\n"
+"POT-Creation-Date: 2022-12-03 16:06+0900\n"
 "PO-Revision-Date: 2020-12-20 13:26+0530\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: Français\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/MainWindow.vala:68
+#: src/MainWindow.vala:73
 msgid "Help and FAQ"
 msgstr ""
 
-#: src/MainView.vala:46 src/MainView.vala:196
+#: src/MainView.vala:46 src/MainView.vala:200
 msgid "Copied to clipboard"
 msgstr "Copié dans le presse-papiers"
 
@@ -63,16 +63,18 @@ msgstr "Copier"
 msgid "Copy without symbols"
 msgstr ""
 
-#: src/MainView.vala:129 src/MainView.vala:214
+#: src/MainView.vala:130 src/MainView.vala:219
 #, c-format
-msgid "Clearing clipboard in %.0f seconds"
-msgstr ""
+msgid "Clearing clipboard in %.0f second"
+msgid_plural "Clearing clipboard in %.0f seconds"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/MainView.vala:182
+#: src/MainView.vala:186
 msgid "Could not derive password"
 msgstr "Impossible d'obtenir le mot de passe"
 
-#: src/MainView.vala:206
+#: src/MainView.vala:210
 msgid "Cleared the clipboard"
 msgstr ""
 

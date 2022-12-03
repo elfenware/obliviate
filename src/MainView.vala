@@ -126,7 +126,11 @@ public class Obliviate.MainView : Gtk.Overlay {
         button_box.pack_start (copy_btn);
         button_box.pack_end (copy_without_symbols_btn);
 
-        clearing_label = new Gtk.Label (_ ("Clearing clipboard in %.0f seconds").printf (CLIPBOARD_LIFE)) {
+        clearing_label = new Gtk.Label (ngettext (
+            "Clearing clipboard in %.0f second",
+            "Clearing clipboard in %.0f seconds",
+            (ulong) CLIPBOARD_LIFE
+        ).printf (CLIPBOARD_LIFE)) {
             margin_top = 18,
             halign = Gtk.Align.START,
             hexpand = false

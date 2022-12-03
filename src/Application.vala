@@ -27,6 +27,13 @@ public class Obliviate.Application : Granite.Application {
         );
     }
 
+    construct {
+        Intl.setlocale (LocaleCategory.ALL, "");
+        GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        GLib.Intl.textdomain (GETTEXT_PACKAGE);
+    }
+
     protected override void activate () {
         window = new MainWindow (this);
 

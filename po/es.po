@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-05 18:59+0530\n"
+"POT-Creation-Date: 2022-12-03 16:06+0900\n"
 "PO-Revision-Date: 2020-12-18 20:37+0530\n"
 "Last-Translator: Darshak Parikh, José Expósito\n"
 "Language-Team: Español\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/MainWindow.vala:68
+#: src/MainWindow.vala:73
 msgid "Help and FAQ"
 msgstr ""
 
-#: src/MainView.vala:46 src/MainView.vala:196
+#: src/MainView.vala:46 src/MainView.vala:200
 msgid "Copied to clipboard"
 msgstr "Copiado en el portapapeles"
 
@@ -63,16 +63,18 @@ msgstr "Copiar"
 msgid "Copy without symbols"
 msgstr ""
 
-#: src/MainView.vala:129 src/MainView.vala:214
-#, c-format
-msgid "Clearing clipboard in %.0f seconds"
-msgstr "Borrando el portapapeles en %.0f segundos"
+#: src/MainView.vala:130 src/MainView.vala:219
+#, fuzzy, c-format
+msgid "Clearing clipboard in %.0f second"
+msgid_plural "Clearing clipboard in %.0f seconds"
+msgstr[0] "Borrando el portapapeles en %.0f segundos"
+msgstr[1] "Borrando el portapapeles en %.0f segundos"
 
-#: src/MainView.vala:182
+#: src/MainView.vala:186
 msgid "Could not derive password"
 msgstr "No se pudo derivar la contraseña"
 
-#: src/MainView.vala:206
+#: src/MainView.vala:210
 msgid "Cleared the clipboard"
 msgstr "Borrado el portapapeles"
 

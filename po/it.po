@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-05 18:59+0530\n"
+"POT-Creation-Date: 2022-12-03 16:06+0900\n"
 "PO-Revision-Date: 2022-06-05 17:10+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:68
+#: src/MainWindow.vala:73
 msgid "Help and FAQ"
 msgstr "Aiuto e FAQ"
 
-#: src/MainView.vala:46 src/MainView.vala:196
+#: src/MainView.vala:46 src/MainView.vala:200
 msgid "Copied to clipboard"
 msgstr "Copiato negli appunti"
 
@@ -62,16 +62,18 @@ msgstr "Copia"
 msgid "Copy without symbols"
 msgstr "Copia senza simboli"
 
-#: src/MainView.vala:129 src/MainView.vala:214
-#, c-format
-msgid "Clearing clipboard in %.0f seconds"
-msgstr "Cancellazione appunti in %.0f secondi"
+#: src/MainView.vala:130 src/MainView.vala:219
+#, fuzzy, c-format
+msgid "Clearing clipboard in %.0f second"
+msgid_plural "Clearing clipboard in %.0f seconds"
+msgstr[0] "Cancellazione appunti in %.0f secondi"
+msgstr[1] "Cancellazione appunti in %.0f secondi"
 
-#: src/MainView.vala:182
+#: src/MainView.vala:186
 msgid "Could not derive password"
 msgstr "Impossibile ottenere la password"
 
-#: src/MainView.vala:206
+#: src/MainView.vala:210
 msgid "Cleared the clipboard"
 msgstr "Cancellato gli appunti"
 
