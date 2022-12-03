@@ -97,12 +97,10 @@ msgid "Add: “Help and FAQ” button"
 msgstr ""
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:27
-#, fuzzy
 msgid "Update: Dutch translations (@Vistaus)"
 msgstr "Ajout : Traductions en néerlandais (@Vistaus)"
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:28
-#, fuzzy
 msgid "Update: Italian translations (@albanobattistella)"
 msgstr "Ajout : Traductions en italien (@albanobattistella)"
 
@@ -111,7 +109,6 @@ msgid "Update: Use elementary Platform 7"
 msgstr ""
 
 #: data/com.github.elfenware.obliviate.appdata.xml.in:42
-#, fuzzy
 msgid "Add: Italian translations (@albanobattistella)"
 msgstr "Ajout : Traductions en italien (@albanobattistella)"
 
