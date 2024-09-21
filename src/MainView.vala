@@ -123,8 +123,8 @@ public class Obliviate.MainView : Gtk.Overlay {
         });
 
         var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        button_box.pack_start (copy_btn);
-        button_box.pack_end (copy_without_symbols_btn);
+        button_box.append (copy_btn);
+        button_box.append (copy_without_symbols_btn);
 
         clearing_label = new Gtk.Label (ngettext (
             "Clearing clipboard in %.0f second",

@@ -32,8 +32,8 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
         var main = new MainView ();
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        box.add (header);
-        box.add (main);
+        box.append (header);
+        box.append (main);
         add (box);
 
         set_geometry_hints (null, Gdk.Geometry () {
