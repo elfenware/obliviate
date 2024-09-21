@@ -64,8 +64,8 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
             show_close_button = true
         };
 
-        header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-        header.get_style_context ().add_class ("headerbar");
+        header.add_css_class (Gtk.STYLE_CLASS_FLAT);
+        header.add_css_class ("headerbar");
 
         var help_btn = new Gtk.Button.from_icon_name ("help-contents") {
             tooltip_text = _("Help and FAQ")

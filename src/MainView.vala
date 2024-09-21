@@ -93,7 +93,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             sensitive = false
         };
 
-        generated_pass.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        generated_pass.add_css_class (Gtk.STYLE_CLASS_FLAT);
 
         show_generated_pass = new Gtk.ToggleButton () {
             active = true,
@@ -108,7 +108,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             sensitive = false
         };
 
-        copy_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        copy_btn.add_css_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
         copy_btn.clicked.connect (() => {
             handle_copy ();
@@ -140,13 +140,13 @@ public class Obliviate.MainView : Gtk.Overlay {
             fraction = 1
         };
 
-        clearing_progress.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        clearing_progress.add_css_class (Gtk.STYLE_CLASS_FLAT);
 
         var plus_label = new Gtk.Label ("+");
-        plus_label.get_style_context ().add_class ("sign");
+        plus_label.add_css_class ("sign");
 
         var equals_label = new Gtk.Label ("=");
-        equals_label.get_style_context ().add_class ("sign");
+        equals_label.add_css_class ("sign");
 
         grid.attach (site_label, 0, 0, 1, 1);
         grid.attach_next_to (site, site_label, Gtk.PositionType.RIGHT);
