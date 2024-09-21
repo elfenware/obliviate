@@ -20,7 +20,7 @@
 
 public class Obliviate.MainView : Gtk.Overlay {
     private Gtk.Grid grid;
-    private Granite.Widgets.Toast toast;
+    private Granite.Toast toast;
 
     private Gtk.Entry site;
     private Gtk.Entry cipher_key;
@@ -31,7 +31,7 @@ public class Obliviate.MainView : Gtk.Overlay {
     private Gtk.Label clearing_label;
     private Gtk.ProgressBar clearing_progress;
 
-    private Gtk.Clipboard clipboard;
+    private Gdk.Clipboard clipboard;
     private const float CLIPBOARD_LIFE = 30;
     private uint timeout_id;
 

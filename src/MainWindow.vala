@@ -18,7 +18,7 @@
  *
  */
 
-public class Obliviate.MainWindow : Hdy.ApplicationWindow {
+public class Obliviate.MainWindow : Adw.ApplicationWindow {
     private GLib.Settings settings;
 
     public MainWindow (Gtk.Application app) {
@@ -59,8 +59,8 @@ public class Obliviate.MainWindow : Hdy.ApplicationWindow {
         });
     }
 
-    private Hdy.HeaderBar get_header () {
-        var header = new Hdy.HeaderBar () {
+    private Adw.HeaderBar get_header () {
+        var header = new Adw.HeaderBar () {
             title = "Obliviate",
             has_subtitle = false,
             show_close_button = true
