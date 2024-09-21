@@ -52,8 +52,6 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
 
         resize (settings.get_int ("window-width"), settings.get_int ("window-height"));
 
-        show_all ();
-
         delete_event.connect (e => {
             return before_destroy ();
         });
