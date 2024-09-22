@@ -108,7 +108,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             sensitive = false
         };
 
-        copy_btn.add_css_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        copy_btn.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         copy_btn.clicked.connect (() => {
             handle_copy ();
