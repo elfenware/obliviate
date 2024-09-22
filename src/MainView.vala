@@ -23,9 +23,8 @@ public class Obliviate.MainView : Gtk.Overlay {
     private Granite.Toast toast;
 
     private Gtk.Entry site;
-    private Gtk.Entry cipher_key;
-    private Gtk.Entry generated_pass;
-    private Gtk.ToggleButton show_generated_pass;
+    private Gtk.PasswordEntry cipher_key;
+    private Gtk.PasswordEntry generated_pass;
     private Gtk.Button copy_btn;
     private Gtk.Button copy_without_symbols_btn;
     private Gtk.Label clearing_label;
@@ -62,7 +61,7 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         site.changed.connect (handle_generate_password);
 
-        var site_info = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.MENU) {
+        var site_info = new Gtk.Image.from_icon_name ("dialog-information-symbolic") {
             tooltip_text = _ ("Site is not case-sensitive. “GitHub” equals “github”.")
         };
 
@@ -71,41 +70,23 @@ public class Obliviate.MainView : Gtk.Overlay {
             margin_end = 4
         };
 
-        // TODO: replace with Gtk.PasswordEntry after updating to Gtk4
-        cipher_key = new Gtk.Entry () {
-            visibility = false,
-            caps_lock_warning = true,
-            input_purpose = Gtk.InputPurpose.PASSWORD,
+        cipher_key = new Gtk.PasswordEntry () {
+            visible = false,
             placeholder_text = _ ("correct horse battery staple"),
-            width_chars = 24
+            width_chars = 24,
+            show_peek_icon = true
         };
 
         cipher_key.changed.connect (handle_generate_password);
 
-        var show_cipher_key = new Gtk.ToggleButton () {
-            active = true,
-            tooltip_text = _ ("Show or hide the cipher key")
-        };
-
-        show_cipher_key.add (new Gtk.Image.from_icon_name ("image-red-eye-symbolic", Gtk.IconSize.BUTTON));
-        show_cipher_key.bind_property ("active", cipher_key, "visibility", BindingFlags.INVERT_BOOLEAN);
-
-        generated_pass = new Gtk.Entry () {
-            visibility = false,
+        generated_pass = new Gtk.PasswordEntry () {
+            visible = false,
             editable = false,
-            sensitive = false
+            sensitive = false,
+            show_peek_icon = true
         };
 
         generated_pass.add_css_class (Granite.STYLE_CLASS_FLAT);
-
-        show_generated_pass = new Gtk.ToggleButton () {
-            active = true,
-            tooltip_text = _ ("Show or hide the password"),
-            sensitive = false
-        };
-
-        show_generated_pass.add (new Gtk.Image.from_icon_name ("image-red-eye-symbolic", Gtk.IconSize.BUTTON));
-        show_generated_pass.bind_property ("active", generated_pass, "visibility", BindingFlags.INVERT_BOOLEAN);
 
         copy_btn = new Gtk.Button.with_label (_ ("Copy")) {
             sensitive = false
@@ -159,12 +140,10 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         grid.attach (cipher_key_label, 0, 2, 1, 1);
         grid.attach_next_to (cipher_key, cipher_key_label, Gtk.PositionType.RIGHT);
-        grid.attach_next_to (show_cipher_key, cipher_key, Gtk.PositionType.RIGHT);
 
         grid.attach_next_to (equals_label, cipher_key, Gtk.PositionType.BOTTOM);
 
         grid.attach_next_to (generated_pass, equals_label, Gtk.PositionType.BOTTOM);
-        grid.attach_next_to (show_generated_pass, generated_pass, Gtk.PositionType.RIGHT);
         grid.attach_next_to (button_box, generated_pass, Gtk.PositionType.BOTTOM);
 
         clipboard = Gdk.Display.get_default ().get_clipboard ();
@@ -173,7 +152,6 @@ public class Obliviate.MainView : Gtk.Overlay {
     private void handle_generate_password () {
         if (site.text.length == 0 || cipher_key.text.length == 0) {
             generated_pass.text = "";
-            show_generated_pass.sensitive = false;
             copy_btn.sensitive = false;
             copy_without_symbols_btn.sensitive = false;
             return;
@@ -181,7 +159,6 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         try {
             generated_pass.text = Service.derive_password (cipher_key.text, site.text.down ());
-            show_generated_pass.sensitive = true;
             copy_btn.sensitive = true;
             copy_without_symbols_btn.sensitive = true;
             animate_password ();
