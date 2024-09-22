@@ -47,12 +47,7 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
     }
 
     private Adw.HeaderBar get_header () {
-        var header = new Adw.HeaderBar () {
-            title = "Obliviate",
-            has_subtitle = false,
-            show_close_button = true
-        };
-
+        var header = new Adw.HeaderBar ();
         header.add_css_class (Granite.STYLE_CLASS_FLAT);
         header.add_css_class ("headerbar");
 
