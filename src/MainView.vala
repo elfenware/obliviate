@@ -164,7 +164,7 @@ public class Obliviate.MainView : Gtk.Overlay {
         grid.attach_next_to (show_generated_pass, generated_pass, Gtk.PositionType.RIGHT);
         grid.attach_next_to (button_box, generated_pass, Gtk.PositionType.BOTTOM);
 
-        clipboard = Gtk.Clipboard.get_default (Gdk.Display.get_default ());
+        clipboard = Gdk.Display.get_default ().get_clipboard ();
     }
 
     private void handle_generate_password () {
@@ -195,7 +195,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             ? Service.remove_symbols (generated_pass.text)
             : generated_pass.text;
 
-        clipboard.set_text (text_to_copy, generated_pass.text.length);
+        clipboard.set_text (text_to_copy);
 
         toast.title = _ ("Copied to clipboard");
         toast.send_notification ();
@@ -205,7 +205,7 @@ public class Obliviate.MainView : Gtk.Overlay {
         float seconds_left = CLIPBOARD_LIFE;
         timeout_id = Timeout.add_seconds (1, () => {
             if (seconds_left == 0) {
-                clipboard.clear ();
+                clipboard.set_text ("");
 
                 toast.title = _ ("Cleared the clipboard");
                 toast.send_notification ();
