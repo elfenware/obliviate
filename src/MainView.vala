@@ -222,10 +222,9 @@ public class Obliviate.MainView : Gtk.Overlay {
     }
 
     private void animate_password () {
-        var password_style = generated_pass.get_style_context ();
-        password_style.add_class ("regenerating");
+        generated_pass.add_css_class ("regenerating");
         Timeout.add (100, () => {
-            password_style.remove_class ("regenerating");
+            generated_pass.remove_css_class ("regenerating");
             return false;
         });
     }
