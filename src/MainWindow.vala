@@ -41,8 +41,8 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
         settings = new GLib.Settings ("com.github.elfenware.obliviate.state");
         set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
 
-        delete_event.connect (e => {
-            return before_destroy ();
+        close_request.connect (e => {
+            return before_close ();
         });
     }
 
@@ -68,7 +68,7 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
         return header;
     }
 
-    private bool before_destroy () {
+    private bool before_close () {
         int width, height;
 
         get_default_size (out width, out height);
