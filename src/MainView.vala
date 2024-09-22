@@ -43,7 +43,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             halign = Gtk.Align.CENTER
         };
 
-        toast = new Granite.Widgets.Toast (_ ("Copied to clipboard"));
+        toast = new Granite.Toast (_ ("Copied to clipboard"));
 
         add (grid);
         add_overlay (toast);
