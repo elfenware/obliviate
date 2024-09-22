@@ -39,13 +39,16 @@ public class Obliviate.MainView : Gtk.Overlay {
         grid = new Gtk.Grid () {
             row_spacing = 4,
             column_spacing = 4,
-            margin = 30,
+            margin_top = 30,
+            margin_bottom = 30,
+            margin_start = 30,
+            margin_end = 30,
             halign = Gtk.Align.CENTER
         };
 
         toast = new Granite.Toast (_ ("Copied to clipboard"));
 
-        add (grid);
+        set_child (grid);
         add_overlay (toast);
 
         var site_label = new Gtk.Label (_ ("Site:")) {
