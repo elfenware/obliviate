@@ -26,7 +26,7 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
-        Hdy.init ();
+        Adw.init ();
         var header = get_header ();
 
         var main = new MainView ();
@@ -34,12 +34,9 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         box.append (header);
         box.append (main);
-        add (box);
+        set_content (box);
 
-        set_geometry_hints (null, Gdk.Geometry () {
-            min_width = 440,
-            min_height = 280
-        }, Gdk.WindowHints.MIN_SIZE);
+        set_size_request (440, 280);
 
         settings = new GLib.Settings ("com.github.elfenware.obliviate.state");
 
@@ -50,7 +47,7 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
             move (default_x, default_y);
         }
 
-        resize (settings.get_int ("window-width"), settings.get_int ("window-height"));
+        set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
 
         delete_event.connect (e => {
             return before_destroy ();
@@ -88,7 +85,7 @@ public class Obliviate.MainWindow : Adw.ApplicationWindow {
         int x, y, width, height;
 
         get_position (out x, out y);
-        get_size (out width, out height);
+        get_default_size (out width, out height);
 
         settings.set_int ("window-x", x);
         settings.set_int ("window-y", y);
