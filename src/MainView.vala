@@ -18,7 +18,9 @@
  *
  */
 
-public class Obliviate.MainView : Gtk.Overlay {
+public class Obliviate.MainView : Gtk.Widget {
+    private Gtk.Overlay overlay;
+
     private Gtk.Grid grid;
     private Granite.Toast toast;
 
@@ -35,6 +37,11 @@ public class Obliviate.MainView : Gtk.Overlay {
     private uint timeout_id;
 
     construct {
+        set_layout_manager_type (typeof (Gtk.BinLayout));
+
+        overlay = new Gtk.Overlay ();
+        overlay.set_parent (this);
+
         grid = new Gtk.Grid () {
             row_spacing = 4,
             column_spacing = 4,
@@ -47,8 +54,8 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         toast = new Granite.Toast (_ ("Copied to clipboard"));
 
-        set_child (grid);
-        add_overlay (toast);
+        overlay.set_child (grid);
+        overlay.add_overlay (toast);
 
         var site_label = new Gtk.Label (_ ("Site:")) {
             halign = Gtk.Align.END,
@@ -147,6 +154,10 @@ public class Obliviate.MainView : Gtk.Overlay {
         grid.attach_next_to (button_box, generated_pass, Gtk.PositionType.BOTTOM);
 
         clipboard = Gdk.Display.get_default ().get_clipboard ();
+    }
+
+    protected override void dispose () {
+        overlay.unparent ();
     }
 
     private void handle_generate_password () {
