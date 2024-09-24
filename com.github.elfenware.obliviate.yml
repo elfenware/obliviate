@@ -1,7 +1,7 @@
 app-id: com.github.elfenware.obliviate
 
 runtime: io.elementary.Platform
-runtime-version: '7'
+runtime-version: '8'
 sdk: io.elementary.Sdk
 
 command: com.github.elfenware.obliviate
