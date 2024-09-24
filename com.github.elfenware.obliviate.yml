@@ -12,12 +12,19 @@ finish-args:
   - '--socket=wayland'
 
 modules:
-  - name: gcrypt
+  - name: libgpg-error
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.8.tar.bz2
-        sha256: 895de2bb981dd127f0821d1ce13fadf7d760f9fa7737648b15f2c1fe13cc5af5
+        url: https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.50.tar.bz2
+        sha256: 69405349e0a633e444a28c5b35ce8f14484684518a508dc48a089992fe93e20a
+  - name: libgcrypt
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.11.0.tar.bz2
+        sha256: 09120c9867ce7f2081d6aaa1775386b98c2f2f246135761aae47d81f58685b9c
+    config-opts:
   - name: obliviate
     buildsystem: meson
     sources:

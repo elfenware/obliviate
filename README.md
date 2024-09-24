@@ -54,7 +54,7 @@ build Obliviate yourself, you'll need the following dependencies:
 You can install them on elementary OS with:
 
 ```shell
-sudo apt install elementary-sdk libgcrypt20-dev
+sudo apt install elementary-sdk libgcrypt20-dev libgpg-error-dev
 ```
 
 Run `meson build` to configure the build environment and run `ninja install`
