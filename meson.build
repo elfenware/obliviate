@@ -2,7 +2,7 @@
 project (
     'com.github.elfenware.obliviate',
     'vala', 'c',
-    version: '2.4.0'
+    version: '3.0.0'
 )
 
 # Translation module
@@ -38,8 +38,8 @@ asresources = gnome.compile_resources (
 # Listing dependencies
 dependencies = [
     dependency ('glib-2.0'),
-    dependency ('granite'),
-    dependency ('gtk+-3.0'),
+    dependency ('granite-7'),
+    dependency ('gtk4'),
     dependency ('libhandy-1'),
     declare_dependency (dependencies: [
         meson.get_compiler ('c').find_library ('libgcrypt'),
@@ -62,4 +62,8 @@ executable (
 subdir('data')
 subdir('po')
 
-meson.add_install_script ('meson/post_install.py')
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+  update_desktop_database: true
+  )

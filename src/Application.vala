@@ -18,7 +18,7 @@
  *
  */
 
-public class Obliviate.Application : Granite.Application {
+public class Obliviate.Application : Gtk.Application {
     private Obliviate.MainWindow window;
 
     public Application () {

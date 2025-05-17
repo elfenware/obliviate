@@ -18,7 +18,7 @@
  *
  */
 
-public class Obliviate.MainWindow : Hdy.ApplicationWindow {
+public class Obliviate.MainWindow : Gtk.Window {
     private GLib.Settings settings;
 
     public MainWindow (Gtk.Application app) {
@@ -26,7 +26,6 @@ public class Obliviate.MainWindow : Hdy.ApplicationWindow {
     }
 
     construct {
-        Hdy.init ();
         var header = get_header ();
 
         var main = new MainView ();
@@ -34,27 +33,17 @@ public class Obliviate.MainWindow : Hdy.ApplicationWindow {
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         box.add (header);
         box.add (main);
-        add (box);
+        set_child (box);
 
-        set_geometry_hints (null, Gdk.Geometry () {
-            min_width = 440,
-            min_height = 280
-        }, Gdk.WindowHints.MIN_SIZE);
+        set_size_request (440, 280);
 
         settings = new GLib.Settings ("com.github.elfenware.obliviate.state");
 
-        int default_x = settings.get_int ("window-x");
-        int default_y = settings.get_int ("window-y");
+        set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
 
-        if (default_x != -1 && default_y != -1) {
-            move (default_x, default_y);
-        }
+        show ();
 
-        resize (settings.get_int ("window-width"), settings.get_int ("window-height"));
-
-        show_all ();
-
-        delete_event.connect (e => {
+        this.close_request.connect (e => {
             return before_destroy ();
         });
     }
@@ -66,8 +55,8 @@ public class Obliviate.MainWindow : Hdy.ApplicationWindow {
             show_close_button = true
         };
 
-        header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-        header.get_style_context ().add_class ("headerbar");
+        header.add_css_class (Gtk.STYLE_CLASS_FLAT);
+        header.add_css_class ("headerbar");
 
         var help_btn = new Gtk.Button.from_icon_name ("help-contents") {
             tooltip_text = _("Help and FAQ")
@@ -87,13 +76,10 @@ public class Obliviate.MainWindow : Hdy.ApplicationWindow {
     }
 
     private bool before_destroy () {
-        int x, y, width, height;
+        int width, height;
 
-        get_position (out x, out y);
-        get_size (out width, out height);
+        get_default_size (out width, out height);
 
-        settings.set_int ("window-x", x);
-        settings.set_int ("window-y", y);
         settings.set_int ("window-width", width);
         settings.set_int ("window-height", height);
 

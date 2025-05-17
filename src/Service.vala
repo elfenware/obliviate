@@ -62,7 +62,16 @@ public class Obliviate.Service : GLib.Object {
     }
 
     public static string remove_symbols (string str) {
-        var regex = new Regex ("[^a-zA-Z0-9]");
-        return regex.replace (str, str.length, 0, "");
+        Regex regex;
+
+        try {
+            regex = new Regex ("[^a-zA-Z0-9]");
+            return regex.replace (str, str.length, 0, "");
+        
+        } catch (Error e) {
+            debug("no");
+        }
+
+
     }
 }

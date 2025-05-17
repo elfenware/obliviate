@@ -20,7 +20,7 @@
 
 public class Obliviate.MainView : Gtk.Overlay {
     private Gtk.Grid grid;
-    private Granite.Widgets.Toast toast;
+    private Granite.Toast toast;
 
     private Gtk.Entry site;
     private Gtk.Entry cipher_key;
@@ -43,9 +43,9 @@ public class Obliviate.MainView : Gtk.Overlay {
             halign = Gtk.Align.CENTER
         };
 
-        toast = new Granite.Widgets.Toast (_ ("Copied to clipboard"));
+        var toast = new Granite.Toast (_ ("Copied to clipboard"));
 
-        add (grid);
+        set_child (grid);
         add_overlay (toast);
 
         var site_label = new Gtk.Label (_ ("Site:")) {
@@ -87,13 +87,13 @@ public class Obliviate.MainView : Gtk.Overlay {
         show_cipher_key.add (new Gtk.Image.from_icon_name ("image-red-eye-symbolic", Gtk.IconSize.BUTTON));
         show_cipher_key.bind_property ("active", cipher_key, "visibility", BindingFlags.INVERT_BOOLEAN);
 
-        generated_pass = new Gtk.Entry () {
+        this.generated_pass = new Gtk.Entry () {
             visibility = false,
             editable = false,
             sensitive = false
         };
 
-        generated_pass.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        this.generated_pass.add_css_class (Gtk.STYLE_CLASS_FLAT);
 
         show_generated_pass = new Gtk.ToggleButton () {
             active = true,
@@ -101,14 +101,14 @@ public class Obliviate.MainView : Gtk.Overlay {
             sensitive = false
         };
 
-        show_generated_pass.add (new Gtk.Image.from_icon_name ("image-red-eye-symbolic", Gtk.IconSize.BUTTON));
+        show_generated_pass.set_icon_name ("image-red-eye-symbolic");
         show_generated_pass.bind_property ("active", generated_pass, "visibility", BindingFlags.INVERT_BOOLEAN);
 
         copy_btn = new Gtk.Button.with_label (_ ("Copy")) {
             sensitive = false
         };
 
-        copy_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        copy_btn.add_css_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
         copy_btn.clicked.connect (() => {
             handle_copy ();
@@ -140,7 +140,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             fraction = 1
         };
 
-        clearing_progress.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        clearing_progress.add_css_class (Gtk.STYLE_CLASS_FLAT);
 
         var plus_label = new Gtk.Label ("+");
         plus_label.get_style_context ().add_class ("sign");
@@ -242,10 +242,9 @@ public class Obliviate.MainView : Gtk.Overlay {
     }
 
     private void animate_password () {
-        var password_style = generated_pass.get_style_context ();
-        password_style.add_class ("regenerating");
+        generated_pass.add_css_class ("regenerating");
         Timeout.add (100, () => {
-            password_style.remove_class ("regenerating");
+            generated_pass.remove_css_class ("regenerating");
             return false;
         });
     }
