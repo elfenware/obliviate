@@ -19,6 +19,13 @@ modules:
       - type: archive
         url: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.8.tar.bz2
         sha256: 895de2bb981dd127f0821d1ce13fadf7d760f9fa7737648b15f2c1fe13cc5af5
+    modules:
+      - name: libgpg-error
+        buildsystem: autotools
+        sources:
+        - type: archive
+          url: https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.55.tar.gz
+          sha256: bda09f51d7ed64565e41069d782bfcc4984aed908ae68bee01fb692b64ea96e2
   - name: obliviate
     buildsystem: meson
     sources:
