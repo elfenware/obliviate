@@ -40,7 +40,6 @@ dependencies = [
     dependency ('glib-2.0'),
     dependency ('granite-7'),
     dependency ('gtk4'),
-    dependency ('libhandy-1'),
     declare_dependency (dependencies: [
         meson.get_compiler ('c').find_library ('libgcrypt'),
         meson.get_compiler ('vala').find_library ('gcrypt', dirs: join_paths (meson.current_source_dir (), 'vapi'))
