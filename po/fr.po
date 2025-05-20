@@ -2,14 +2,14 @@
 # Copyright (C) 2020 THE com.github.elfenware.obliviate'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.elfenware.obliviate package.
 # Nathan Bonnemains (@NathanBnm), 2020.
-#
+# Teamcons (teamcons.carrd.co), 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.elfenware.obliviate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-03 16:06+0900\n"
-"PO-Revision-Date: 2020-12-20 13:26+0530\n"
-"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
+"PO-Revision-Date: 2025-05-20 13:26+0530\n"
+"Last-Translator: Stella and Charlie <teamcons.carrd.co>\n"
 "Language-Team: Français\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: src/MainWindow.vala:73
 msgid "Help and FAQ"
-msgstr ""
+msgstr "Aide et questions fréquemment posées"
 
 #: src/MainView.vala:46 src/MainView.vala:200
 msgid "Copied to clipboard"
@@ -36,8 +36,7 @@ msgstr "GitHub"
 #: src/MainView.vala:63
 msgid "Site is not case-sensitive. “GitHub” equals “github”."
 msgstr ""
-"Le site n'est pas sensible à la casse. « GitHub » est équivalent à « github "
-"»."
+"Insensible à la casse. « GitHub » est équivalent à « github »."
 
 #: src/MainView.vala:66
 msgid "Cipher key:"
@@ -61,22 +60,22 @@ msgstr "Copier"
 
 #: src/MainView.vala:117
 msgid "Copy without symbols"
-msgstr ""
+msgstr "Copier sans caractères spéciaux"
 
 #: src/MainView.vala:130 src/MainView.vala:219
 #, c-format
 msgid "Clearing clipboard in %.0f second"
 msgid_plural "Clearing clipboard in %.0f seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Presse-papiers vidé dans %.0f seconde"
+msgstr[1] "Presse-papiers vidé dans %.0f secondes"
 
 #: src/MainView.vala:186
 msgid "Could not derive password"
-msgstr "Impossible d'obtenir le mot de passe"
+msgstr "Échec du calcul du mot de passe"
 
 #: src/MainView.vala:210
 msgid "Cleared the clipboard"
-msgstr ""
+msgstr "Presse-papiers vidé"
 
 #~ msgid "Derive Password"
 #~ msgstr "Obtenir le mot de passe"
