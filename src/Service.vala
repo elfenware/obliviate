@@ -67,11 +67,8 @@ public class Obliviate.Service : GLib.Object {
         try {
             regex = new Regex ("[^a-zA-Z0-9]");
             return regex.replace (str, str.length, 0, "");
-        
         } catch (Error e) {
-            debug("Error removing symbols.");
+            debug ("Error removing symbols.");
         }
-
-
     }
 }
