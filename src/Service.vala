@@ -69,7 +69,7 @@ public class Obliviate.Service : GLib.Object {
             return regex.replace (str, str.length, 0, "");
         
         } catch (Error e) {
-            debug("no");
+            debug("Error removing symbols.");
         }
 
 
