@@ -48,15 +48,15 @@ public class Obliviate.MainWindow : Gtk.Window {
         });
     }
 
-    private Hdy.HeaderBar get_header () {
-        var header = new Hdy.HeaderBar () {
-            title = "Obliviate",
-            has_subtitle = false,
-            show_close_button = true
-        };
+    private Gtk.HeaderBar get_header () {
+        set_title (_("Obliviate"));
+        Gtk.Label title_widget = new Gtk.Label (_("Obliviate"));
+        title_widget.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
 
-        header.add_css_class (Gtk.STYLE_CLASS_FLAT);
-        header.add_css_class ("headerbar");
+        var header = new Gtk.HeaderBar ();
+        header.set_title_widget (title_widget);
+        header.add_css_class (Granite.STYLE_CLASS_FLAT);
+        set_titlebar (header);
 
         var help_btn = new Gtk.Button.from_icon_name ("help-contents") {
             tooltip_text = _("Help and FAQ")
