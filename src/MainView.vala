@@ -93,7 +93,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             sensitive = false
         };
 
-        this.generated_pass.add_css_class (Gtk.STYLE_CLASS_FLAT);
+        this.generated_pass.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         show_generated_pass = new Gtk.ToggleButton () {
             active = true,
@@ -108,7 +108,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             sensitive = false
         };
 
-        copy_btn.add_css_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        copy_btn.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         copy_btn.clicked.connect (() => {
             handle_copy ();
@@ -140,7 +140,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             fraction = 1
         };
 
-        clearing_progress.add_css_class (Gtk.STYLE_CLASS_FLAT);
+        clearing_progress.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         var plus_label = new Gtk.Label ("+");
         plus_label.get_style_context ().add_class ("sign");
