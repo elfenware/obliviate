@@ -22,6 +22,8 @@ modules:
     modules:
       - name: libgpg-error
         buildsystem: autotools
+        config-opts:
+          - "--enable-install-gpg-error-config"
         sources:
         - type: archive
           url: https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.55.tar.gz
