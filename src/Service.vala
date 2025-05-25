@@ -70,5 +70,7 @@ public class Obliviate.Service : GLib.Object {
         } catch (Error e) {
             debug ("Error removing symbols.");
         }
+
+        return str;
     }
 }

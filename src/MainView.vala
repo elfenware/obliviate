@@ -38,7 +38,10 @@ public class Obliviate.MainView : Gtk.Overlay {
         grid = new Gtk.Grid () {
             row_spacing = 4,
             column_spacing = 4,
-            margin = 30,
+            margin_top = 30,
+            margin_bottom = 30,
+            margin_start = 30,
+            margin_end = 30,
             halign = Gtk.Align.CENTER
         };
 
@@ -53,14 +56,12 @@ public class Obliviate.MainView : Gtk.Overlay {
         };
 
         site = new Gtk.Entry () {
-            placeholder_text = _ ("GitHub")
+            placeholder_text = _ ("GitHub"),
+            primary_icon_name = "dialog-information-symbolic",
+            primary_icon_tooltip_text = "Site is not case-sensitive. “GitHub” equals “github”."
         };
 
         site.changed.connect (handle_generate_password);
-
-        var site_info = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.MENU) {
-            tooltip_text = _ ("Site is not case-sensitive. “GitHub” equals “github”.")
-        };
 
         var cipher_key_label = new Gtk.Label (_ ("Cipher key:")) {
             halign = Gtk.Align.END,
@@ -103,8 +104,8 @@ public class Obliviate.MainView : Gtk.Overlay {
         });
 
         var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        button_box.pack_start (copy_btn);
-        button_box.pack_end (copy_without_symbols_btn);
+        button_box.prepend (copy_btn);
+        button_box.append (copy_without_symbols_btn);
 
         clearing_label = new Gtk.Label (ngettext (
             "Clearing clipboard in %.0f second",
@@ -123,14 +124,13 @@ public class Obliviate.MainView : Gtk.Overlay {
         clearing_progress.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         var plus_label = new Gtk.Label ("+");
-        plus_label.get_style_context ().add_class ("sign");
+        plus_label.add_css_class ("sign");
 
         var equals_label = new Gtk.Label ("=");
-        equals_label.get_style_context ().add_class ("sign");
+        equals_label.add_css_class ("sign");
 
         grid.attach (site_label, 0, 0, 1, 1);
         grid.attach_next_to (site, site_label, Gtk.PositionType.RIGHT);
-        grid.attach_next_to (site_info, site, Gtk.PositionType.RIGHT);
 
         grid.attach_next_to (plus_label, site, Gtk.PositionType.BOTTOM);
 

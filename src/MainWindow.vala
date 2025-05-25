@@ -26,13 +26,13 @@ public class Obliviate.MainWindow : Gtk.Window {
     }
 
     construct {
-        var header = get_header ();
+        var headerbar = get_headerbar ();
 
         var main = new MainView ();
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        box.add (header);
-        box.add (main);
+        box.append (headerbar);
+        box.append (main);
         set_child (box);
 
         set_size_request (440, 280);
@@ -48,15 +48,15 @@ public class Obliviate.MainWindow : Gtk.Window {
         });
     }
 
-    private Gtk.HeaderBar get_header () {
+    private Gtk.HeaderBar get_headerbar () {
         set_title (_("Obliviate"));
         Gtk.Label title_widget = new Gtk.Label (_("Obliviate"));
         title_widget.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
 
-        var header = new Gtk.HeaderBar ();
-        header.set_title_widget (title_widget);
-        header.add_css_class (Granite.STYLE_CLASS_FLAT);
-        set_titlebar (header);
+        var headerbar = new Gtk.HeaderBar ();
+        headerbar.set_title_widget (title_widget);
+        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+        set_titlebar (headerbar);
 
         var help_btn = new Gtk.Button.from_icon_name ("help-contents") {
             tooltip_text = _("Help and FAQ")
@@ -70,9 +70,9 @@ public class Obliviate.MainWindow : Gtk.Window {
             }
         });
 
-        header.pack_end (help_btn);
+        headerbar.pack_end (help_btn);
 
-        return header;
+        return headerbar;
     }
 
     private bool before_destroy () {
