@@ -18,35 +18,40 @@
  *
  */
 
-public class Obliviate.MainView : Gtk.Overlay {
+public class Obliviate.MainView : Gtk.Box {
+    private Gtk.Overlay overlay;
     private Gtk.Grid grid;
-    private Granite.Widgets.Toast toast;
+    private Granite.Toast toast;
 
     private Gtk.Entry site;
-    private Gtk.Entry cipher_key;
-    private Gtk.Entry generated_pass;
-    private Gtk.ToggleButton show_generated_pass;
+    private Gtk.PasswordEntry cipher_key;
+    private Gtk.PasswordEntry generated_pass;
     private Gtk.Button copy_btn;
     private Gtk.Button copy_without_symbols_btn;
     private Gtk.Label clearing_label;
     private Gtk.ProgressBar clearing_progress;
 
-    private Gtk.Clipboard clipboard;
+    private Gdk.Clipboard clipboard;
     private const float CLIPBOARD_LIFE = 30;
     private uint timeout_id;
 
     construct {
+        overlay = new Gtk.Overlay();
+
         grid = new Gtk.Grid () {
             row_spacing = 4,
             column_spacing = 4,
-            margin = 30,
+            margin_top = 30,
+            margin_bottom = 30,
+            margin_start = 30,
+            margin_end = 30,
             halign = Gtk.Align.CENTER
         };
 
-        toast = new Granite.Widgets.Toast (_ ("Copied to clipboard"));
+        var toast = new Granite.Toast (_ ("Copied to clipboard"));
 
-        add (grid);
-        add_overlay (toast);
+        overlay.set_child (grid);
+        overlay.add_overlay (toast);
 
         var site_label = new Gtk.Label (_ ("Site:")) {
             halign = Gtk.Align.END,
@@ -54,61 +59,40 @@ public class Obliviate.MainView : Gtk.Overlay {
         };
 
         site = new Gtk.Entry () {
-            placeholder_text = _ ("GitHub")
+            placeholder_text = _ ("GitHub"),
+            primary_icon_name = "dialog-information-symbolic",
+            primary_icon_tooltip_text = "Site is not case-sensitive. “GitHub” equals “github”."
         };
 
         site.changed.connect (handle_generate_password);
-
-        var site_info = new Gtk.Image.from_icon_name ("dialog-information-symbolic", Gtk.IconSize.MENU) {
-            tooltip_text = _ ("Site is not case-sensitive. “GitHub” equals “github”.")
-        };
 
         var cipher_key_label = new Gtk.Label (_ ("Cipher key:")) {
             halign = Gtk.Align.END,
             margin_end = 4
         };
 
-        // TODO: replace with Gtk.PasswordEntry after updating to Gtk4
-        cipher_key = new Gtk.Entry () {
-            visibility = false,
-            caps_lock_warning = true,
-            input_purpose = Gtk.InputPurpose.PASSWORD,
+        cipher_key = new Gtk.PasswordEntry () {
+            show_peek_icon = true,
             placeholder_text = _ ("correct horse battery staple"),
             width_chars = 24
         };
 
         cipher_key.changed.connect (handle_generate_password);
 
-        var show_cipher_key = new Gtk.ToggleButton () {
-            active = true,
-            tooltip_text = _ ("Show or hide the cipher key")
-        };
-
-        show_cipher_key.add (new Gtk.Image.from_icon_name ("image-red-eye-symbolic", Gtk.IconSize.BUTTON));
-        show_cipher_key.bind_property ("active", cipher_key, "visibility", BindingFlags.INVERT_BOOLEAN);
-
-        generated_pass = new Gtk.Entry () {
-            visibility = false,
+        this.generated_pass = new Gtk.PasswordEntry () {
+            show_peek_icon = true,
             editable = false,
-            sensitive = false
+            sensitive = false,
+            width_chars = 24
         };
 
-        generated_pass.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-
-        show_generated_pass = new Gtk.ToggleButton () {
-            active = true,
-            tooltip_text = _ ("Show or hide the password"),
-            sensitive = false
-        };
-
-        show_generated_pass.add (new Gtk.Image.from_icon_name ("image-red-eye-symbolic", Gtk.IconSize.BUTTON));
-        show_generated_pass.bind_property ("active", generated_pass, "visibility", BindingFlags.INVERT_BOOLEAN);
+        this.generated_pass.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         copy_btn = new Gtk.Button.with_label (_ ("Copy")) {
             sensitive = false
         };
 
-        copy_btn.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        copy_btn.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         copy_btn.clicked.connect (() => {
             handle_copy ();
@@ -123,8 +107,8 @@ public class Obliviate.MainView : Gtk.Overlay {
         });
 
         var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        button_box.pack_start (copy_btn);
-        button_box.pack_end (copy_without_symbols_btn);
+        button_box.prepend (copy_btn);
+        button_box.append (copy_without_symbols_btn);
 
         clearing_label = new Gtk.Label (ngettext (
             "Clearing clipboard in %.0f second",
@@ -140,37 +124,35 @@ public class Obliviate.MainView : Gtk.Overlay {
             fraction = 1
         };
 
-        clearing_progress.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        clearing_progress.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         var plus_label = new Gtk.Label ("+");
-        plus_label.get_style_context ().add_class ("sign");
+        plus_label.add_css_class ("sign");
 
         var equals_label = new Gtk.Label ("=");
-        equals_label.get_style_context ().add_class ("sign");
+        equals_label.add_css_class ("sign");
 
         grid.attach (site_label, 0, 0, 1, 1);
         grid.attach_next_to (site, site_label, Gtk.PositionType.RIGHT);
-        grid.attach_next_to (site_info, site, Gtk.PositionType.RIGHT);
 
         grid.attach_next_to (plus_label, site, Gtk.PositionType.BOTTOM);
 
         grid.attach (cipher_key_label, 0, 2, 1, 1);
         grid.attach_next_to (cipher_key, cipher_key_label, Gtk.PositionType.RIGHT);
-        grid.attach_next_to (show_cipher_key, cipher_key, Gtk.PositionType.RIGHT);
 
         grid.attach_next_to (equals_label, cipher_key, Gtk.PositionType.BOTTOM);
 
         grid.attach_next_to (generated_pass, equals_label, Gtk.PositionType.BOTTOM);
-        grid.attach_next_to (show_generated_pass, generated_pass, Gtk.PositionType.RIGHT);
         grid.attach_next_to (button_box, generated_pass, Gtk.PositionType.BOTTOM);
 
-        clipboard = Gtk.Clipboard.get_default (Gdk.Display.get_default ());
+        clipboard = this.get_clipboard ();
+
+        append (overlay);
     }
 
     private void handle_generate_password () {
         if (site.text.length == 0 || cipher_key.text.length == 0) {
             generated_pass.text = "";
-            show_generated_pass.sensitive = false;
             copy_btn.sensitive = false;
             copy_without_symbols_btn.sensitive = false;
             return;
@@ -178,7 +160,6 @@ public class Obliviate.MainView : Gtk.Overlay {
 
         try {
             generated_pass.text = Service.derive_password (cipher_key.text, site.text.down ());
-            show_generated_pass.sensitive = true;
             copy_btn.sensitive = true;
             copy_without_symbols_btn.sensitive = true;
             animate_password ();
@@ -195,7 +176,7 @@ public class Obliviate.MainView : Gtk.Overlay {
             ? Service.remove_symbols (generated_pass.text)
             : generated_pass.text;
 
-        clipboard.set_text (text_to_copy, generated_pass.text.length);
+        clipboard.set_text (text_to_copy);
 
         toast.title = _ ("Copied to clipboard");
         toast.send_notification ();
@@ -205,7 +186,7 @@ public class Obliviate.MainView : Gtk.Overlay {
         float seconds_left = CLIPBOARD_LIFE;
         timeout_id = Timeout.add_seconds (1, () => {
             if (seconds_left == 0) {
-                clipboard.clear ();
+                clipboard.set_text ("");
 
                 toast.title = _ ("Cleared the clipboard");
                 toast.send_notification ();
@@ -242,10 +223,9 @@ public class Obliviate.MainView : Gtk.Overlay {
     }
 
     private void animate_password () {
-        var password_style = generated_pass.get_style_context ();
-        password_style.add_class ("regenerating");
+        generated_pass.add_css_class ("regenerating");
         Timeout.add (100, () => {
-            password_style.remove_class ("regenerating");
+            generated_pass.remove_css_class ("regenerating");
             return false;
         });
     }

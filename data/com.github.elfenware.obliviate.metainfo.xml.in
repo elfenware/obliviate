@@ -19,6 +19,13 @@
     <p>Bonus: If you need your passwords on another device, you can get them on the web from obliviate.app.</p>
   </description>
   <releases>
+    <release version="3.0.0" date="2022-06-05">
+      <description>
+        <ul>
+          <li>Move to modern tech</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.4.0" date="2022-06-05">
       <description>
         <ul>

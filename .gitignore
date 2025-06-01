@@ -2,3 +2,5 @@ build
 builddir
 .flatpak-builder
 *~
+.flatpak
+.vscode
