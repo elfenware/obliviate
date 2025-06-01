@@ -36,7 +36,10 @@ public class Obliviate.MainView : Gtk.Box {
     private uint timeout_id;
 
     construct {
-        overlay = new Gtk.Overlay();
+        overlay = new Gtk.Overlay() {
+            hexpand = true,
+            vexpand = true
+        };
 
         grid = new Gtk.Grid () {
             row_spacing = 4,
