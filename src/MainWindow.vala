@@ -19,8 +19,6 @@
  */
 
 public class Obliviate.MainWindow : Gtk.Window {
-    private GLib.Settings settings;
-
     public MainWindow (Gtk.Application app) {
         Object (application: app);
     }
@@ -37,15 +35,7 @@ public class Obliviate.MainWindow : Gtk.Window {
 
         set_size_request (440, 280);
 
-        settings = new GLib.Settings ("com.github.elfenware.obliviate.state");
-
-        set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
-
         show ();
-
-        this.close_request.connect (e => {
-            return before_destroy ();
-        });
     }
 
     private Gtk.HeaderBar get_headerbar () {
@@ -73,16 +63,5 @@ public class Obliviate.MainWindow : Gtk.Window {
         headerbar.pack_end (help_btn);
 
         return headerbar;
-    }
-
-    private bool before_destroy () {
-        int width, height;
-
-        get_default_size (out width, out height);
-
-        settings.set_int ("window-width", width);
-        settings.set_int ("window-height", height);
-
-        return false;
     }
 }
