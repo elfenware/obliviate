@@ -46,8 +46,8 @@ public class Obliviate.MainView : Gtk.Box {
             column_spacing = 4,
             margin_top = 30,
             margin_bottom = 30,
-            margin_start = 30,
-            margin_end = 30,
+            margin_start = 18,
+            margin_end = 18,
             halign = Gtk.Align.CENTER
         };
 
@@ -92,7 +92,8 @@ public class Obliviate.MainView : Gtk.Box {
         this.generated_pass.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         copy_btn = new Gtk.Button.with_label (_ ("Copy")) {
-            sensitive = false
+            sensitive = false,
+			hexpand = true
         };
 
         copy_btn.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
