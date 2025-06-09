@@ -85,11 +85,8 @@ public class Obliviate.MainView : Gtk.Box {
         this.generated_pass = new Gtk.PasswordEntry () {
             show_peek_icon = true,
             editable = false,
-            sensitive = false,
             width_chars = 24
         };
-
-        this.generated_pass.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         copy_btn = new Gtk.Button.with_label (_ ("Copy")) {
             sensitive = false,
@@ -110,8 +107,11 @@ public class Obliviate.MainView : Gtk.Box {
             handle_copy (true);
         });
 
-        var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        button_box.prepend (copy_btn);
+        var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 8) {
+            margin_top = 4
+        };
+
+        button_box.append (copy_btn);
         button_box.append (copy_without_symbols_btn);
 
         clearing_label = new Gtk.Label (ngettext (
