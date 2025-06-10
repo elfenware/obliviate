@@ -36,7 +36,7 @@ public class Obliviate.MainView : Gtk.Box {
     private uint timeout_id;
 
     construct {
-        overlay = new Gtk.Overlay() {
+        overlay = new Gtk.Overlay () {
             hexpand = true,
             vexpand = true
         };
@@ -90,7 +90,7 @@ public class Obliviate.MainView : Gtk.Box {
 
         copy_btn = new Gtk.Button.with_label (_ ("Copy")) {
             sensitive = false,
-			hexpand = true
+            hexpand = true
         };
 
         copy_btn.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
