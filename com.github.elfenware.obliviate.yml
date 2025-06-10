@@ -17,8 +17,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.8.tar.bz2
-        sha256: 895de2bb981dd127f0821d1ce13fadf7d760f9fa7737648b15f2c1fe13cc5af5
+        url: https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.8.11.tar.gz
+        sha256: 0cd1f534f89fd6d423e9d07932cfeba8f712f693d24a0ed2be46ec8f21ed9cef
     modules:
       - name: libgpg-error
         buildsystem: autotools
