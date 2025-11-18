@@ -1,0 +1,79 @@
+# Swedish translation for obliviate.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.elfenware.obliviate package.
+# Daniel Nylander <po@danielnylander.se>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.elfenware.obliviate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-03 16:06+0900\n"
+"PO-Revision-Date: 2025-11-18 09:51+0100\n"
+"Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#: src/MainWindow.vala:73
+msgid "Help and FAQ"
+msgstr "Hjälp och vanliga frågor"
+
+#: src/MainView.vala:46 src/MainView.vala:200
+msgid "Copied to clipboard"
+msgstr "Kopierat till urklipp"
+
+#: src/MainView.vala:51
+msgid "Site:"
+msgstr "Webbplats:"
+
+#: src/MainView.vala:57
+msgid "GitHub"
+msgstr "GitHub"
+
+#: src/MainView.vala:63
+msgid "Site is not case-sensitive. “GitHub” equals “github”."
+msgstr "Webbplatsen är inte skiftlägeskänslig. ”GitHub” är detsamma som ”github”."
+
+#: src/MainView.vala:66
+msgid "Cipher key:"
+msgstr "Krypteringsnyckel:"
+
+#: src/MainView.vala:76
+msgid "correct horse battery staple"
+msgstr "korrekt häst batteri häftklammer"
+
+#: src/MainView.vala:84
+msgid "Show or hide the cipher key"
+msgstr "Visa eller dölj krypteringsnyckeln"
+
+#: src/MainView.vala:100
+msgid "Show or hide the password"
+msgstr "Visa eller dölj lösenordet"
+
+#: src/MainView.vala:107
+msgid "Copy"
+msgstr "Kopiera"
+
+#: src/MainView.vala:117
+msgid "Copy without symbols"
+msgstr "Kopiera utan symboler"
+
+#: src/MainView.vala:130 src/MainView.vala:219
+#, c-format
+msgid "Clearing clipboard in %.0f second"
+msgid_plural "Clearing clipboard in %.0f seconds"
+msgstr[0] "Tömmer urklipp om %.0f sekund"
+msgstr[1] "Tömmer urklipp om %.0f sekunder"
+
+#: src/MainView.vala:186
+msgid "Could not derive password"
+msgstr "Kunde inte härleda lösenordet"
+
+#: src/MainView.vala:210
+msgid "Cleared the clipboard"
+msgstr "Tömde urklipp"
