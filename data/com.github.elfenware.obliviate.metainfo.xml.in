@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Darshak Parikh <darshak%protonmaildotkom> -->
-<component type="desktop">
+<component type="desktop-application">
   <id>com.github.elfenware.obliviate</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
@@ -69,54 +69,34 @@
       </description>
     </release>
   </releases>
+  <launchable type="desktop-id">com.github.elfenware.obliviate.desktop</launchable>
+  <translation type="gettext" source_locale="en_US">com.github.elfenware.obliviate</translation>
   <provides>
     <binary>com.github.elfenware.obliviate</binary>
   </provides>
-  <content_rating type="oars-1.1">
-    <content_attribute id="violence-cartoon">none</content_attribute>
-    <content_attribute id="violence-fantasy">none</content_attribute>
-    <content_attribute id="violence-realistic">none</content_attribute>
-    <content_attribute id="violence-bloodshed">none</content_attribute>
-    <content_attribute id="violence-sexual">none</content_attribute>
-    <content_attribute id="violence-desecration">none</content_attribute>
-    <content_attribute id="violence-slavery">none</content_attribute>
-    <content_attribute id="violence-worship">none</content_attribute>
-    <content_attribute id="drugs-alcohol">none</content_attribute>
-    <content_attribute id="drugs-narcotics">none</content_attribute>
-    <content_attribute id="drugs-tobacco">none</content_attribute>
-    <content_attribute id="sex-nudity">none</content_attribute>
-    <content_attribute id="sex-themes">none</content_attribute>
-    <content_attribute id="sex-homosexuality">none</content_attribute>
-    <content_attribute id="sex-prostitution">none</content_attribute>
-    <content_attribute id="sex-adultery">none</content_attribute>
-    <content_attribute id="sex-appearance">none</content_attribute>
-    <content_attribute id="language-profanity">none</content_attribute>
-    <content_attribute id="language-humor">none</content_attribute>
-    <content_attribute id="language-discrimination">none</content_attribute>
-    <content_attribute id="social-chat">none</content_attribute>
-    <content_attribute id="social-info">none</content_attribute>
-    <content_attribute id="social-audio">none</content_attribute>
-    <content_attribute id="social-location">none</content_attribute>
-    <content_attribute id="social-contacts">none</content_attribute>
-    <content_attribute id="money-purchasing">none</content_attribute>
-    <content_attribute id="money-gambling">none</content_attribute>
-  </content_rating>
-  <developer_name>Elfenware</developer_name>
+  <content_rating type="oars-1.1"/>
+  <developer id="com.github.elfenware">
+    <name>Elfenware</name>
+  </developer>
   <url type="homepage">https://obliviate.app</url>
   <url type="bugtracker">https://github.com/elfenware/obliviate/issues</url>
   <url type="help">https://github.com/elfenware/obliviate/issues</url>
+  <url type="vcs-browser">https://github.com/elfenware/obliviate</url>
   <update_contact>darshak_AT_protonmail.com</update_contact>
   <screenshots>
-    <screenshot type="default">
+    <screenshot type="default" environment="pantheon">
+      <caption>App window</caption>
       <image>https://raw.githubusercontent.com/elfenware/obliviate/main/data/window-screenshot.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="pantheon:dark">
+      <caption>App window</caption>
       <image>https://raw.githubusercontent.com/elfenware/obliviate/main/data/window-screenshot-2.png</image>
     </screenshot>
   </screenshots>
+  <branding>
+    <color type="primary">#ffffff</color>
+  </branding>
   <custom>
-    <value key="x-appcenter-color-primary">#fff</value>
-    <value key="x-appcenter-color-primary-text">#333</value>
     <value key="x-appcenter-suggested-price">0</value>
   </custom>
 </component>
