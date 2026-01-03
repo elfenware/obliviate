@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build
-        uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
+        uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
           bundle: obliviate.flatpak
           manifest-path: com.github.elfenware.obliviate.yml
