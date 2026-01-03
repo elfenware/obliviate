@@ -44,10 +44,9 @@ built for [elementary OS].
 Development is targeted at [elementary OS]. If you want to hack on and
 build Obliviate yourself, you'll need the following dependencies:
 
-- libgranite-dev
-- libgtk-3-dev
+- libgranite-7-dev
+- libgtk-4-dev
 - libgcrypt20-dev
-- libhandy-1-dev
 - meson
 - valac
 
