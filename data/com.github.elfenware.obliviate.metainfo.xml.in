@@ -22,7 +22,8 @@
     <release version="3.0.0" date="2022-06-05">
       <description>
         <ul>
-          <li>Move to modern tech</li>
+          <li>Update: Move to modern tech (GTK4)</li>
+          <li>Add: Swedish translations (@yeager)</li>
         </ul>
       </description>
     </release>
