@@ -41,7 +41,7 @@ dependencies = [
     dependency ('granite-7'),
     dependency ('gtk4'),
     declare_dependency (dependencies: [
-        meson.get_compiler ('c').find_library ('libgcrypt'),
+        meson.get_compiler ('c').find_library ('gcrypt'),
         meson.get_compiler ('vala').find_library ('gcrypt', dirs: join_paths (meson.current_source_dir (), 'vapi'))
     ])
 ]
