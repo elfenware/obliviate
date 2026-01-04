@@ -36,7 +36,7 @@ public class Obliviate.Application : Gtk.Application {
 
     protected override void activate () {
         window = new MainWindow (this);
-        window.show ();
+        window.present ();
 
         var gtk_settings = Gtk.Settings.get_default ();
         var granite_settings = Granite.Settings.get_default ();
