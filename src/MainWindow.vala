@@ -29,13 +29,12 @@ public class Obliviate.MainWindow : Gtk.Window {
         var main = new MainView ();
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        box.append (headerbar);
         box.append (main);
         set_child (box);
 
-        set_size_request (440, 280);
+        set_titlebar (headerbar);
 
-        show ();
+        set_size_request (440, 280);
     }
 
     private Gtk.HeaderBar get_headerbar () {
@@ -46,7 +45,6 @@ public class Obliviate.MainWindow : Gtk.Window {
         var headerbar = new Gtk.HeaderBar ();
         headerbar.set_title_widget (title_widget);
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
-        set_titlebar (headerbar);
 
         var help_btn = new Gtk.Button.from_icon_name ("help-contents") {
             tooltip_text = _("Help and FAQ")
