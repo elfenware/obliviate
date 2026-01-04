@@ -35,8 +35,6 @@ public class Obliviate.MainWindow : Gtk.Window {
         set_titlebar (headerbar);
 
         set_size_request (440, 280);
-
-        show ();
     }
 
     private Gtk.HeaderBar get_headerbar () {
