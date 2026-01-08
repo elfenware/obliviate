@@ -19,7 +19,15 @@
     <p>Bonus: If you need your passwords on another device, you can get them on the web from obliviate.app.</p>
   </description>
   <releases>
-    <release version="3.0.0" date="2022-06-05">
+    <release version="3.0.1" date="2026-01-08">
+      <description>
+        <ul>
+          <li>Update: Docs and metadata (@ryonakano)</li>
+          <li>Fix: GTK windowing issues and warnings (@ryonakano)</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.0.0" date="2026-01-03">
       <description>
         <ul>
           <li>Update: Move to modern tech (GTK4)</li>
